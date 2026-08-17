@@ -1,0 +1,33 @@
+{
+  "standard": "ISO/IEC/IEEE 29148:2018",
+  "target": "Software Requirement Specifications (SRS)",
+  "quality_characteristics": [
+    {
+      "id": "UNAMBIGUOUS",
+      "name": "Unambiguous",
+      "description": "Requirements must have only one single interpretation.",
+      "bilingual_rules": {
+        "indonesian": {
+          "weak_directives": ["sebaiknya", "dapat", "mungkin", "diharapkan", "sekiranya", "bisa jadi"],
+          "subjective_adjectives": ["cepat", "mudah", "handal", "aman", "user-friendly", "efisien", "fleksibel", "optimum"],
+          "passive_voice_indicators": ["di-", "ter-"]
+        },
+        "english": {
+          "weak_directives": ["should", "could", "may", "might", "ought to", "etc", "and so on"],
+          "subjective_adjectives": ["fast", "easy", "reliable", "secure", "user-friendly", "efficient", "flexible", "robust"],
+          "passive_voice_indicators": ["was", "were", "been", "being", "is by", "are by"]
+        }
+      }
+    },
+    {
+      "id": "COMPLETE",
+      "name": "Complete",
+      "description": "Requirements must include all necessary information, conditions, and measurable acceptance criteria."
+    },
+    {
+      "id": "VERIFIABLE",
+      "name": "Verifiable / Testable",
+      "description": "Requirements must be stated in concrete terms so a test case can prove compliance."
+    }
+  ]
+}

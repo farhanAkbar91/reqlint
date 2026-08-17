@@ -1,0 +1,15 @@
+{
+  "framework": "INVEST Criteria for Agile User Stories",
+  "criteria": {
+    "Independent": "User story should be self-contained and not tightly coupled to other stories.",
+    "Negotiable": "User story is not an explicit contract; details are co-created with the team.",
+    "Valuable": "User story delivers clear value to the end user (Role-Action-Benefit).",
+    "Estimable": "Requirements must be concrete enough for developers to estimate effort.",
+    "Small": "Story size should fit comfortably within one sprint iteration.",
+    "Testable": "Must have clear, unambiguous Acceptance Criteria (Given-When-Then format)."
+  },
+  "pattern_check": {
+    "user_story_format_id": "Sebagai [Role], Saya ingin [Action], Sehingga [Benefit]",
+    "user_story_format_en": "As a [Role], I want to [Action], So that [Benefit]"
+  }
+}

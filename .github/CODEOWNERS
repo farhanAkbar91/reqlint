@@ -1,0 +1,20 @@
+# ReqLint Code Owners File
+# Defines automatic reviewers based on modified folder paths.
+# Replace/Add team member GitHub usernames (@username) for each role.
+
+# PM & System Architect Workspace
+/pm-docs/             @farhanAkbar91
+
+# AI / NLP Engine Workspace
+/ai-engine/           @farhanAkbar91
+
+# Backend FastAPI Workspace
+/backend/             @farhanAkbar91
+
+# Frontend & Cypress QA Workspace
+/frontend-qa/         @farhanAkbar91
+
+# Infrastructure & Global Configuration
+docker-compose.yml    @farhanAkbar91
+.github/              @farhanAkbar91
+README.md             @farhanAkbar91

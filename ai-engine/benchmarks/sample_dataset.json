@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "language": "id",
+    "text": "Sistem sebaiknya dapat memproses data transaksi pengguna dengan cepat.",
+    "expected_smells": ["WEAK_DIRECTIVE_ID", "SUBJECTIVE_ADJECTIVE_ID"]
+  },
+  {
+    "id": 2,
+    "language": "id",
+    "text": "Sistem HARUS menyimpan laporan audit ke database PostgreSQL dalam waktu kurang dari 200 ms.",
+    "expected_smells": []
+  },
+  {
+    "id": 3,
+    "language": "en",
+    "text": "The system should allow users to search for documents easily.",
+    "expected_smells": ["WEAK_DIRECTIVE_EN", "SUBJECTIVE_ADJECTIVE_EN"]
+  },
+  {
+    "id": 4,
+    "language": "en",
+    "text": "The system SHALL authenticate user requests using JWT tokens within 100 ms.",
+    "expected_smells": []
+  }
+]
