@@ -1,0 +1,1472 @@
+[
+  {
+    "id": 1,
+    "language": "id",
+    "user_story": "Sebagai pembeli, saya ingin melacak posisi kurir pada peta secara real-time, sehingga saya mengetahui estimasi waktu pesanan tiba.",
+    "annotations_round1": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    },
+    "annotations_round2_final": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "consensus_label": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    }
+  },
+  {
+    "id": 2,
+    "language": "id",
+    "user_story": "Sebagai user, saya ingin login dengan cepat dan mudah.",
+    "annotations_round1": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 0,
+        "E": 0,
+        "S": 1,
+        "T": 0
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 0,
+        "S": 1,
+        "T": 0
+      }
+    },
+    "annotations_round2_final": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 0,
+        "E": 0,
+        "S": 1,
+        "T": 0
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 0,
+        "E": 0,
+        "S": 1,
+        "T": 0
+      },
+      "consensus_label": {
+        "I": 1,
+        "N": 1,
+        "V": 0,
+        "E": 0,
+        "S": 1,
+        "T": 0
+      }
+    }
+  },
+  {
+    "id": 3,
+    "language": "id",
+    "user_story": "Sebagai admin gudang, saya ingin mencetak label barcode dan juga memperbarui stok barang serta mengirim notifikasi ke supplier, sehingga pengiriman siap.",
+    "annotations_round1": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 0,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 0,
+        "S": 0,
+        "T": 1
+      }
+    },
+    "annotations_round2_final": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 0,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 0,
+        "T": 1
+      },
+      "consensus_label": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 0,
+        "T": 1
+      }
+    }
+  },
+  {
+    "id": 4,
+    "language": "id",
+    "user_story": "Sebagai kasir, saya ingin menekan tombol biru berukuran 120x40px di sudut kanan bawah berlabel 'SUBMIT' dengan font Roboto 12pt untuk menyimpan transaksi ke tabel orders_v2.",
+    "annotations_round1": {
+      "annotator_1": {
+        "I": 1,
+        "N": 0,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    },
+    "annotations_round2_final": {
+      "annotator_1": {
+        "I": 1,
+        "N": 0,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 0,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "consensus_label": {
+        "I": 1,
+        "N": 0,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    }
+  },
+  {
+    "id": 5,
+    "language": "id",
+    "user_story": "Sebagai pelanggan, saya ingin menerima email konfirmasi pesanan dengan nomor resi, sehingga saya memiliki bukti transaksi yang sah.",
+    "annotations_round1": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    },
+    "annotations_round2_final": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "consensus_label": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    }
+  },
+  {
+    "id": 6,
+    "language": "id",
+    "user_story": "Sebagai analis data, laporan harus dapat diekspor ke format Excel oleh sistem.",
+    "annotations_round1": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 0,
+        "E": 0,
+        "S": 1,
+        "T": 0
+      },
+      "annotator_2": {
+        "I": 0,
+        "N": 1,
+        "V": 1,
+        "E": 0,
+        "S": 1,
+        "T": 0
+      }
+    },
+    "annotations_round2_final": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 0,
+        "E": 0,
+        "S": 1,
+        "T": 0
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 0,
+        "E": 0,
+        "S": 1,
+        "T": 0
+      },
+      "consensus_label": {
+        "I": 1,
+        "N": 1,
+        "V": 0,
+        "E": 0,
+        "S": 1,
+        "T": 0
+      }
+    }
+  },
+  {
+    "id": 7,
+    "language": "id",
+    "user_story": "Sebagai pengguna aplikasi, saya ingin mengatur preferensi notifikasi harian, sehingga saya tidak terganggu saat jam kerja.",
+    "annotations_round1": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    },
+    "annotations_round2_final": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "consensus_label": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    }
+  },
+  {
+    "id": 8,
+    "language": "id",
+    "user_story": "Sebagai pembeli, setelah menyelesaikan Story #12 tentang checkout, saya ingin melihat halaman terima kasih.",
+    "annotations_round1": {
+      "annotator_1": {
+        "I": 0,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    },
+    "annotations_round2_final": {
+      "annotator_1": {
+        "I": 0,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 0,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "consensus_label": {
+        "I": 0,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    }
+  },
+  {
+    "id": 9,
+    "language": "id",
+    "user_story": "Sebagai dokter, saya ingin mencari riwayat rekam medis pasien berdasarkan nomor NIK, sehingga saya dapat memberikan diagnosis akurat.",
+    "annotations_round1": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    },
+    "annotations_round2_final": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "consensus_label": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    }
+  },
+  {
+    "id": 10,
+    "language": "id",
+    "user_story": "Sebagai manajer, saya ingin sistem bekerja secara optimal dan reliabel tanpa downtime.",
+    "annotations_round1": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 0,
+        "E": 0,
+        "S": 1,
+        "T": 0
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 0,
+        "S": 1,
+        "T": 0
+      }
+    },
+    "annotations_round2_final": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 0,
+        "E": 0,
+        "S": 1,
+        "T": 0
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 0,
+        "E": 0,
+        "S": 1,
+        "T": 0
+      },
+      "consensus_label": {
+        "I": 1,
+        "N": 1,
+        "V": 0,
+        "E": 0,
+        "S": 1,
+        "T": 0
+      }
+    }
+  },
+  {
+    "id": 11,
+    "language": "id",
+    "user_story": "Sebagai kurir, saya ingin mengunggah foto bukti serah terima paket ke penerima, sehingga status pengiriman berubah menjadi terkirim.",
+    "annotations_round1": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    },
+    "annotations_round2_final": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "consensus_label": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    }
+  },
+  {
+    "id": 12,
+    "language": "id",
+    "user_story": "Sebagai staf HR, saya ingin mengajukan cuti tahunan, agar jatah cuti saya terpotong sesuai ketentuan perusahaan.",
+    "annotations_round1": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    },
+    "annotations_round2_final": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 0,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "consensus_label": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    }
+  },
+  {
+    "id": 13,
+    "language": "id",
+    "user_story": "Sebagai nasabah, saya ingin mentransfer saldo antarbank dengan waktu pemrosesan < 5 detik, sehingga penerima segera menerima dana.",
+    "annotations_round1": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    },
+    "annotations_round2_final": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "consensus_label": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    }
+  },
+  {
+    "id": 14,
+    "language": "id",
+    "user_story": "Sebagai pedagang, saya ingin mengunggah beberapa produk sekaligus menggunakan file template CSV, sehingga saya menghemat waktu input katalog.",
+    "annotations_round1": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 0,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    },
+    "annotations_round2_final": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 0,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 0,
+        "S": 1,
+        "T": 1
+      },
+      "consensus_label": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 0,
+        "S": 1,
+        "T": 1
+      }
+    }
+  },
+  {
+    "id": 15,
+    "language": "id",
+    "user_story": "Sebagai mahasiswa, saya ingin mengisi KRS semester baru dan membayar UKT via virtual account serta mencetak KSM, sehingga saya resmi terdaftar.",
+    "annotations_round1": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 0,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 0,
+        "S": 0,
+        "T": 1
+      }
+    },
+    "annotations_round2_final": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 0,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 0,
+        "S": 0,
+        "T": 1
+      },
+      "consensus_label": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 0,
+        "T": 1
+      }
+    }
+  },
+  {
+    "id": 16,
+    "language": "en",
+    "user_story": "As a buyer, I want to filter products by price range ($10 - $50), so that I can discover affordable items quickly.",
+    "annotations_round1": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    },
+    "annotations_round2_final": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "consensus_label": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    }
+  },
+  {
+    "id": 17,
+    "language": "en",
+    "user_story": "As a user, the system should allow me to change settings easily.",
+    "annotations_round1": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 0,
+        "E": 0,
+        "S": 1,
+        "T": 0
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 0,
+        "S": 1,
+        "T": 0
+      }
+    },
+    "annotations_round2_final": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 0,
+        "E": 0,
+        "S": 1,
+        "T": 0
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 0,
+        "E": 0,
+        "S": 1,
+        "T": 0
+      },
+      "consensus_label": {
+        "I": 1,
+        "N": 1,
+        "V": 0,
+        "E": 0,
+        "S": 1,
+        "T": 0
+      }
+    }
+  },
+  {
+    "id": 18,
+    "language": "en",
+    "user_story": "As a store owner, I want to view a monthly sales revenue summary chart, so that I can analyze revenue growth trends.",
+    "annotations_round1": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    },
+    "annotations_round2_final": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "consensus_label": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    }
+  },
+  {
+    "id": 19,
+    "language": "en",
+    "user_story": "As a shopper, I want to click a 14px red button that executes an SQL INSERT into users table to register.",
+    "annotations_round1": {
+      "annotator_1": {
+        "I": 1,
+        "N": 0,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    },
+    "annotations_round2_final": {
+      "annotator_1": {
+        "I": 1,
+        "N": 0,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 0,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "consensus_label": {
+        "I": 1,
+        "N": 0,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    }
+  },
+  {
+    "id": 20,
+    "language": "en",
+    "user_story": "As a customer, I want to reset my account password via a secure email verification token, so that I can regain access if forgotten.",
+    "annotations_round1": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    },
+    "annotations_round2_final": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "consensus_label": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    }
+  },
+  {
+    "id": 21,
+    "language": "en",
+    "user_story": "As a driver, I want to accept or decline ride requests within 15 seconds, so that nearby passengers get timely pickups.",
+    "annotations_round1": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    },
+    "annotations_round2_final": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "consensus_label": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    }
+  },
+  {
+    "id": 22,
+    "language": "en",
+    "user_story": "As an accountant, I want to import invoices and also generate tax withholding reports as well as sync with SAP ERP, so books are balanced.",
+    "annotations_round1": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 0,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 0,
+        "S": 0,
+        "T": 1
+      }
+    },
+    "annotations_round2_final": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 0,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 0,
+        "T": 1
+      },
+      "consensus_label": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 0,
+        "T": 1
+      }
+    }
+  },
+  {
+    "id": 23,
+    "language": "en",
+    "user_story": "As a patient, I want to schedule a doctor consultation appointment online, so that I do not need to queue in the hospital lobby.",
+    "annotations_round1": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    },
+    "annotations_round2_final": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "consensus_label": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    }
+  },
+  {
+    "id": 24,
+    "language": "en",
+    "user_story": "As an admin, user data was created by automated cron job and stored safely.",
+    "annotations_round1": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 0,
+        "E": 0,
+        "S": 1,
+        "T": 0
+      },
+      "annotator_2": {
+        "I": 0,
+        "N": 1,
+        "V": 1,
+        "E": 0,
+        "S": 1,
+        "T": 0
+      }
+    },
+    "annotations_round2_final": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 0,
+        "E": 0,
+        "S": 1,
+        "T": 0
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 0,
+        "E": 0,
+        "S": 1,
+        "T": 0
+      },
+      "consensus_label": {
+        "I": 1,
+        "N": 1,
+        "V": 0,
+        "E": 0,
+        "S": 1,
+        "T": 0
+      }
+    }
+  },
+  {
+    "id": 25,
+    "language": "en",
+    "user_story": "As a reader, I want to bookmark article chapters, so that I can resume reading from where I left off.",
+    "annotations_round1": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    },
+    "annotations_round2_final": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "consensus_label": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    }
+  },
+  {
+    "id": 26,
+    "language": "en",
+    "user_story": "As a team member, I want this story to run only after User Story US-44 is fully deployed to production.",
+    "annotations_round1": {
+      "annotator_1": {
+        "I": 0,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    },
+    "annotations_round2_final": {
+      "annotator_1": {
+        "I": 0,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 0,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "consensus_label": {
+        "I": 0,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    }
+  },
+  {
+    "id": 27,
+    "language": "en",
+    "user_story": "As a job applicant, I want to upload my PDF resume (< 5MB), so that recruiters can review my work qualifications.",
+    "annotations_round1": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    },
+    "annotations_round2_final": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "consensus_label": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    }
+  },
+  {
+    "id": 28,
+    "language": "en",
+    "user_story": "As an investor, I want to see various stock metrics and many charts with fast performance.",
+    "annotations_round1": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 0,
+        "E": 0,
+        "S": 1,
+        "T": 0
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 0,
+        "S": 1,
+        "T": 0
+      }
+    },
+    "annotations_round2_final": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 0,
+        "E": 0,
+        "S": 1,
+        "T": 0
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 0,
+        "E": 0,
+        "S": 1,
+        "T": 0
+      },
+      "consensus_label": {
+        "I": 1,
+        "N": 1,
+        "V": 0,
+        "E": 0,
+        "S": 1,
+        "T": 0
+      }
+    }
+  },
+  {
+    "id": 29,
+    "language": "en",
+    "user_story": "As a subscriber, I want to cancel my recurring subscription from account settings, so that my card is not charged for next month.",
+    "annotations_round1": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    },
+    "annotations_round2_final": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "consensus_label": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    }
+  },
+  {
+    "id": 30,
+    "language": "en",
+    "user_story": "As a security officer, I want to review failed login attempts exceeding 5 trials in 10 minutes, so that brute-force attacks are thwarted.",
+    "annotations_round1": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    },
+    "annotations_round2_final": {
+      "annotator_1": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "annotator_2": {
+        "I": 0,
+        "N": 0,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      },
+      "consensus_label": {
+        "I": 1,
+        "N": 1,
+        "V": 1,
+        "E": 1,
+        "S": 1,
+        "T": 1
+      }
+    }
+  }
+]

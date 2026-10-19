@@ -1,15 +1,49 @@
 {
   "framework": "INVEST Criteria for Agile User Stories",
-  "criteria": {
-    "Independent": "User story should be self-contained and not tightly coupled to other stories.",
-    "Negotiable": "User story is not an explicit contract; details are co-created with the team.",
-    "Valuable": "User story delivers clear value to the end user (Role-Action-Benefit).",
-    "Estimable": "Requirements must be concrete enough for developers to estimate effort.",
-    "Small": "Story size should fit comfortably within one sprint iteration.",
-    "Testable": "Must have clear, unambiguous Acceptance Criteria (Given-When-Then format)."
+  "target": "Agile User Stories & Acceptance Criteria",
+  "version": "0.9-draft",
+  "template": {
+    "indonesian": "Sebagai [Peran/Persona], Saya ingin [Aksi/Fitur], Sehingga [Manfaat/Value]",
+    "english": "As a [Role/Persona], I want [Action/Feature], so that [Benefit/Value]"
   },
-  "pattern_check": {
-    "user_story_format_id": "Sebagai [Role], Saya ingin [Action], Sehingga [Benefit]",
-    "user_story_format_en": "As a [Role], I want to [Action], So that [Benefit]"
+  "criteria": {
+    "Independent": {
+      "code": "I",
+      "description": "User story harus mandiri dan tidak terikat kuat dengan story lain (bebas ketergantungan urutan/ID cerita lain).",
+      "smell_rules": ["EXPLICIT_STORY_DEPENDENCY"],
+      "severity": "HIGH"
+    },
+    "Negotiable": {
+      "code": "N",
+      "description": "User story mendeskripsikan kebutuhan bisnis ('what/why'), bukan spesifikasi teknis kaku atau rincian UI yang mengunci implementasi ('how').",
+      "smell_rules": ["OVERLY_PRESCRIPTIVE_UI", "HARDCODED_DATABASE_SCHEMA"],
+      "severity": "MEDIUM"
+    },
+    "Valuable": {
+      "code": "V",
+      "description": "User story harus memberikan nilai nyata bagi pengguna dengan format eksplisit (Role nyata dan klausul Benefit substantif).",
+      "smell_rules": ["MISSING_ROLE", "MISSING_ACTION", "MISSING_BENEFIT", "TAUTOLOGICAL_BENEFIT"],
+      "severity": "HIGH"
+    },
+    "Estimable": {
+      "code": "E",
+      "description": "Ruang lingkup fungsionalitas harus cukup berbatas sehingga developer dapat memperkirakan bobot kerja (bebas kuantitas samar seperti 'beberapa', 'banyak', 'dll').",
+      "smell_rules": ["VAGUE_QUANTIFIER"],
+      "severity": "MEDIUM"
+    },
+    "Small": {
+      "code": "S",
+      "description": "Ukuran user story harus pas diselesaikan dalam 1 sprint; tidak boleh berupa compound story (Epic) yang menggabungkan banyak kapabilitas.",
+      "smell_rules": ["COMPOUND_STORY_EPIC"],
+      "severity": "MEDIUM"
+    },
+    "Testable": {
+      "code": "T",
+      "description": "User story harus dapat diuji dengan Acceptance Criteria yang jelas; bebas dari kata sifat kualitatif tak terukur ('cepat', 'mudah') dan kalimat pasif tanpa aktor.",
+      "smell_rules": ["SUBJECTIVE_ADJECTIVE", "WEAK_DIRECTIVE", "PASSIVE_VOICE"],
+      "severity": "HIGH"
+    }
   }
 }
+
+

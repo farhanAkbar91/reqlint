@@ -24,6 +24,8 @@ app.include_router(api_router, prefix=settings.API_V1_STR)
 def root():
     return {
         "message": "Welcome to ReqLint API Server",
+        "focus": "Agile User Story Quality Assurance & INVEST Criteria",
         "docs": "/docs",
         "bilingual_support": ["indonesian", "english"]
     }
+

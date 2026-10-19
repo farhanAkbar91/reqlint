@@ -9,8 +9,9 @@ import { AuditResponse } from '../types/audit';
 
 export default function HomePage() {
   const [text, setText] = useState(
-    'Sistem sebaiknya dapat memproses pembayaran pengguna dengan cepat.'
+    'Sebagai pembeli, saya sebaiknya dapat membayar transaksi dengan cepat, sehingga pesanan segera diproses.'
   );
+
   const [auditResult, setAuditResult] = useState<AuditResponse | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
