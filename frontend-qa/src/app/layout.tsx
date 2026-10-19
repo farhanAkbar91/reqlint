@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'ReqLint - Requirement Analyzer via NLP',
-  description: 'Automated SRS quality assurance & ambiguity detection based on IEEE 29148 & INVEST criteria.',
+  title: 'ReqLint - Agile User Story Quality Assurance & INVEST Linter',
+  description: 'Automated Agile User Story linting and quality assurance based on INVEST criteria and Connextra format.',
 };
 
 export default function RootLayout({
@@ -23,13 +23,17 @@ export default function RootLayout({
               <span className="text-xl font-bold tracking-tight text-slate-100">
                 Req<span className="text-emerald-400">Lint</span>
               </span>
+              <span className="text-xs bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded-md font-medium">
+                User Story Focus
+              </span>
             </div>
             <div className="text-xs font-mono text-slate-400 bg-slate-800 px-3 py-1 rounded-full">
-              Bilingual (ID / EN) NLP Engine v1.0
+              Bilingual INVEST Linter (ID / EN)
             </div>
           </div>
         </header>
         <main className="max-w-7xl mx-auto px-6 py-8">{children}</main>
+
       </body>
     </html>
   );

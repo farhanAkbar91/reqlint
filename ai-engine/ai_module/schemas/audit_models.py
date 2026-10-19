@@ -26,7 +26,8 @@ class RevisionSuggestion(BaseModel):
     original_text: str
     suggested_text: str
     rationale: str
-    framework: str = Field("IEEE_29148", description="Applied framework, e.g. IEEE 29148 or INVEST")
+    framework: str = Field("INVEST_CRITERIA", description="Applied framework, e.g. INVEST Criteria")
+
 
 class AmbiguityScore(BaseModel):
     overall_quality_score: float = Field(..., ge=0.0, le=100.0, description="0 to 100 quality rating")
