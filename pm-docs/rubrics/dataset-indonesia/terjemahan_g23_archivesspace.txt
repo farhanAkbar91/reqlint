@@ -1,0 +1,56 @@
+Sebagai researcher, saya ingin dapat melihat panduan pencarian untuk koleksi/Sumber Daya tertentu.
+Sebagai Application Administrator, saya ingin dapat menyetel ulang kata sandi Pengguna untuk mereka.
+Sebagai user, saya ingin perubahan backend untuk mengelola daftar enum.
+Sebagai Archivist, saya ingin mengimpor berkas EAD yang diekspor oleh Archon.
+Sebagai Archivist, saya ingin menetapkan pengidentifikasi unik komponen ke Komponen Sumber Daya.
+Sebagai User , saya ingin mengotentikasi menggunakan LDAP.
+Sebagai migration specialist, saya ingin menyimpan id rekaman sumber AT atau Archon di setiap rekaman ASpace untuk mendukung pengujian integritas migrasi data.
+Sebagai Archivist, saya ingin mengaitkan string pengidentifikasi standar dengan tajuk Subjek.
+Sebagai Archivist, saya ingin dapat memahami bahwa terjadi kesalahan selama impor dan mengapa kesalahan tersebut mungkin terjadi.
+Sebagai Archivist, saya ingin mengimpor data Aksesi dalam CSV.
+Sebagai Archivist, saya ingin mengimpor Sumber Daya dari rekaman MARCXML.
+Sebagai user, saya ingin perubahan frontend untuk mengelola daftar enum.
+Sebagai Authenticated User, saya ingin mendapatkan akses ke tautan bantuan kontekstual.
+Sebagai Archivist, saya ingin melihat Tanggal dan Cakupan ditampilkan di tampilan baca dan edit untuk Aksesi dan/atau Sumber Daya sebelum daftar Subjek.
+Sebagai Archivist, saya ingin mengimpor informasi Agen dari rekaman EAC-CPF.
+Sebagai user, saya ingin perubahan backend untuk mendukung pemuatan daftar nilai enum dari basis data.
+Sebagai user, saya ingin perubahan backend untuk pembaruan massal satu nilai enum ke nilai enum lainnya.
+Sebagai Archivist, saya ingin mengekspor rekaman agen sebagai EAC-CPF.
+Sebagai Archivist, saya ingin mengimpor hanya informasi Agen dan Subjek dari rekaman MARCXML.
+Sebagai Application Administrator, saya ingin menetapkan Pengguna ke Entri Data Lanjutan dan memastikan bahwa izin yang sesuai diberlakukan.
+Sebagai Application Administrator , saya ingin dapat mengonfigurasi URL pusat bantuan dan pemetaan topik.
+Sebagai user, saya ingin menambahkan properti tambahan untuk repositori.
+Sebagai Archivist, saya ingin menambahkan Catatan ke jenis rekaman lain.
+Sebagai Administrator, saya ingin membuat akun Pengguna baru untuk orang lain.
+Sebagai Archivist, saya ingin menambahkan data administratif tentang deskripsi arsip dan data terkait panduan pencarian ke Sumber Daya tingkat atas.
+Sebagai Archivist, saya ingin menetapkan Tingkat deskripsi ke Sumber Daya atau Komponen Sumber Daya dan secara opsional menentukan nilai lain jika Tingkat tersebut tidak ada dalam daftar yang telah ditentukan sebelumnya.
+Sebagai developer, saya ingin menggunakan konfigurasi yang tidak dikemas sebelumnya di dalam versi aplikasi yang dibangun.
+Sebagai Archivist, saya ingin mengimpor berkas EAD yang diekspor oleh Archivists' Toolkit.
+Sebagai systems administrator, saya ingin dapat mengontrol lokasi basis data demo dan saya ingin basis data tersebut dicadangkan.
+Sebagai archivist, saya ingin mencari di dalam repositori untuk rekaman sumber daya dan aksesi serta objek digital.
+Sebagai archivist, saya ingin membuat dan mengedit sub-rekaman Manajemen Koleksi.
+Sebagai Archivist, saya ingin mengatur ulang hierarki Sumber Daya dan/atau Objek Digital menggunakan navigasi berbasis papan ketik.
+Sebagai Archivist, saya ingin mengatur ulang hierarki deskripsi sumber daya dengan menyeret objek arsip ke posisi berbeda dalam hierarki.
+Sebagai Archivist, saya ingin menunjukkan bahwa seorang Agen adalah pencipta atau sumber atau subjek dari Aksesi atau Sumber Daya atau Komponen Sumber Daya.
+Sebagai Archivist, saya ingin mengekspor deskripsi sebagai EAD.
+Sebagai Archivist, saya ingin membuat dan mengedit rekaman Acara.
+Sebagai Archivist, saya ingin mengelola Objek Digital.
+Sebagai Archivist, saya ingin mengaitkan suatu Instans dengan Sumber Daya dan/atau Komponen Sumber Daya.
+Sebagai Archivist, saya tidak ingin secara tidak sengaja menimpa perubahan orang lain pada rekaman yang sedang saya edit.
+Sebagai Archivist, saya ingin membuat dan mengedit pernyataan Manajemen Hak.
+Sebagai Archivist, saya ingin mengunggah EAD untuk diimpor dari dalam aplikasi frontend.
+Sebagai Archivist, saya ingin mengimpor data EAD.
+Sebagai Repository Manager , saya ingin membuat, memperbarui, dan menghapus deskripsi arsip di repositori saya.
+Sebagai Developer , saya ingin mengembangkan pengimpor kustom.
+Sebagai Basic Data Entry user , saya ingin membuat dan memperbarui informasi deskripsi arsip dasar.
+Sebagai Repository Manager , saya ingin membuat, memperbarui, dan menghapus rekaman apa pun di repositori saya.
+Sebagai ReadOnly user , saya ingin melihat deskripsi arsip di repositori saya.
+Sebagai System Administrator, saya ingin menyatakan bahwa seorang pengguna adalah memiliki peran Repository Manager untuk Repositori tertentu.
+Sebagai Archivist, saya ingin menentukan Sumber untuk Bentuk Nama dari seorang Agen dan menambahkan Sumber baru serta mengedit Sumber yang ada.
+Sebagai Archivist, saya ingin membuat dan mengedit rekaman Agen.
+Sebagai Archivist, saya ingin membuat dan mengedit rekaman Sumber Daya.
+Sebagai Archivist, saya ingin mengaitkan rekaman Subjek dengan deskripsi Sumber Daya.
+Sebagai User, saya ingin mengotentikasi secara lokal.
+Sebagai User, saya ingin dapat masuk.
+Sebagai Archivist, saya ingin mengaitkan suatu Instans dengan Wadah.
+Sebagai Archivist, saya ingin menetapkan informasi Lokasi ke suatu Wadah.

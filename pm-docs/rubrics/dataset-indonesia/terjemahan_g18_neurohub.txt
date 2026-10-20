@@ -1,0 +1,102 @@
+Sebagai system administrator, saya ingin menjalankan skrip yang menginstal node Neurohub ke sistem operasi Ubuntu baru yang bersih.
+Sebagai system administrator, saya ingin menjalankan skrip yang menguji untuk melihat apakah instalasi Neurohub berfungsi dengan benar.
+Sebagai release engineer, saya ingin memanggil skrip untuk mengeksekusi tes penerimaan terhadap instalasi Neurohub dan melaporkan kembali hasilnya.
+Sebagai investigator, saya ingin melihat hasil tes penerimaan, sehingga saya dapat memahami seberapa lengkap fitur node Neurohub saat ini.
+Sebagai MRI operator, saya ingin merekam secara digital tanggapan yang dibuat subjek saat mengisi formulir berbasis kertas.
+Sebagai user, saya ingin menavigasi maju dan mundur antara buku log dan halaman buku log tanpa harus menggunakan tombol kembali peramban saya.
+Sebagai lab administrator, saya ingin menyesuaikan tema grafis/warna antarmuka Web.
+Sebagai systems administrator, saya ingin menginstal dependensi Neurohub ke dalam mesin Ubuntu 10.04 LTS menggunakan alat manajemen paket Ubuntu biasa.
+Sebagai researcher, saya ingin membuat halaman buku log untuk eksperimen dan melampirkan berkas ke halaman ini.
+Sebagai researcher, saya ingin membuat halaman buku log untuk suatu eksperimen dan melampirkan direktori yang berisi banyak berkas.
+Sebagai researcher, saya ingin mengunggah berkas sebelum melampirkannya ke halaman buku log.
+Sebagai researcher, saya ingin mengunggah berkas sebelum melampirkannya ke halaman buku log menggunakan antarmuka web.
+Sebagai researcher, saya ingin mengunggah berkas sebelum melampirkannya ke halaman buku log menggunakan drive jaringan yang dipetakan.
+Sebagai researcher, saya ingin melampirkan berkas yang saat ini belum dilampirkan ke halaman buku log.
+Sebagai researcher, saya ingin menerima peringatan tentang berkas apa pun yang tidak terlampir yang ada di ruang kerja saya.
+Sebagai researcher, saya ingin mengunduh berkas yang dilampirkan pada eksperimen menggunakan peramban Web saya.
+Sebagai researcher, saya ingin mengakses berkas yang disimpan di ruang kerja Neurohub saya, menggunakan drive jaringan yang terhubung ke workstation saya.
+Sebagai researcher, saya ingin membuat halaman buku log.
+Sebagai release engineer, saya ingin mengonfigurasi nightly builds yang secara otomatis melakukan instalasi Neurohub pada sistem operasi yang bersih, menjalankan pengujian, dan melaporkan kembali hasilnya, tanpa memerlukan input/interaksi manual apa pun.
+Sebagai supervisor, saya ingin melihat apa yang dilakukan peneliti saya pada tanggal atau periode waktu tertentu.
+Sebagai user, saya ingin mengunggah berkas besar berukuran lebih dari 1GB.
+Sebagai user, saya ingin menetapkan tag ke berkas yang telah saya unggah.
+Sebagai user, saya ingin menetapkan informasi khusus ke suatu berkas tergantung pada jenisnya.
+Sebagai user, saya ingin memfilter berkas yang saya peroleh dari hasil pencarian berdasarkan jenisnya.
+Sebagai user, saya ingin menggunakan tag yang saya gunakan adalah bagian dari kosakata yang terkontrol.
+Sebagai user, saya ingin membuat berkas data yang diunggah tidak dapat dimodifikasi.
+Sebagai user, saya ingin membuat tautan terpredikasi antar berkas.
+Sebagai user, saya ingin membatasi apa yang dapat dimasukkan ke bidang metadata.
+Sebagai user, saya ingin berkas yang mungkin tidak sengaja saya hapus dapat dipulihkan.
+Sebagai user, saya ingin kembali ke versi lebih lama dari berkas yang diunggah.
+Sebagai user, saya ingin memiliki cara visual untuk melihat berkas tertentu yang diunggah selama periode waktu tertentu.
+Sebagai user, saya ingin mengaitkan bersama berkas-berkas yang terlibat dalam suatu eksperimen.
+Sebagai system administrator, saya ingin memiliki protokol pencadangan terkelola untuk sistem.
+Sebagai user, saya ingin memasukkan metadata / mendeskripsikan protokol eksperimen bahkan sebelum berkas dibuat.
+Sebagai lab administrator, saya ingin memiliki peningkatan akses ke sistem untuk mendukung pengguna reguler.
+Sebagai user, saya ingin menghubungkan bersama proses eksperimen untuk membangun sebuah eksperimen.
+Sebagai lab administrator, saya ingin membuat templat halaman dengan bidang metadata khusus.
+Sebagai user, saya ingin menangkap metadata yang sama untuk setiap berkas yang dibuat dalam proses eksperimen.
+Sebagai lab administrator, saya ingin cara mengelola stok galur cacing yang terintegrasi dengan Wormbase.
+Sebagai user, saya ingin mencari dan mengunduh protokol eksperimen yang dapat dibaca manusia.
+Sebagai user, saya ingin memodifikasi atau mencabangkan protokol eksperimen, sembari mempertahankan aslinya.
+Sebagai user, saya ingin melihat bagaimana suatu protokol eksperimen telah berkembang dari waktu ke waktu.
+Sebagai user, saya ingin membuat protokol dan menetapkan metadata ke stag apa pun.
+Sebagai user, saya ingin membuktikan secara pasti bahwa saya membuat halaman pada tanggal tertentu.
+Sebagai user, saya ingin mengelola referensi / makalah yang telah saya selidiki.
+Sebagai user, saya ingin mencari berkas secara spesifik daripada halaman buku log.
+Sebagai user, saya ingin membatasi pencarian saya pada sekumpulan buku log tertentu.
+Sebagai user, saya ingin membatasi hasil pencarian saya ke satu atau lebih bagian buku log dari satu atau lebih buku log.
+Sebagai user, saya ingin mengunduh berkas langsung dari halaman hasil pencarian.
+Sebagai user, saya ingin melihat asal-usul halaman sebagai bagian dari hasil pencarian.
+Sebagai user, saya ingin melampirkan beberapa berkas sekaligus ke halaman buku log.
+Sebagai user, saya ingin mengunduh beberapa berkas dari hasil pencarian sekaligus.
+Sebagai user, saya ingin menggambar tabel menggunakan tag HTML sebagai bagian dari konten halaman buku log.
+Sebagai lab member, saya ingin melihat acara dan pemesanan peralatan di dalam kelompok.
+Sebagai user, saya ingin menyimpan video perilaku cacing dengan penyandian yang dapat dianalisis oleh perangkat lunak analisis cacing yang ditulis oleh Christopher James.
+Sebagai system administrator, saya ingin memigrasikan data dari versi NeuroHub yang lebih lama ke versi saat ini.
+Sebagai user, saya ingin sistem juga meneruskan item berita penting ke milis eksternal.
+Sebagai user, saya ingin melihat dan memperbarui inventaris peralatan dan barang habis pakai yang ada di pusat tersebut.
+Sebagai user, saya ingin memiliki spreadsheet yang di-host di dalam halaman Web Neurohub, sehingga saya dapat mengedit dan menghitung biaya secara kolaboratif dengan orang lain saat mengerjakan proposal.
+Sebagai supervisor, saya ingin membuat formulir umpan balik di dalam Neurohub, yang dapat diisi dan dikirimkan oleh siswa saya, untuk memberi saya umpan balik tentang kursus yang mereka ikuti.
+Sebagai user, saya ingin memiliki opsi untuk memberi tahu Neurohub agar mengirimkan konten yang diposkan ke feed Twitter saya pada saat yang sama.
+Sebagai user, saya ingin menjaga entri buku log tetap pribadi atau membagikannya dengan individu daripada grup.
+Sebagai user, saya ingin detail eksekusi alur kerja dicatat dalam buku log neurohub saat mengeksekusi alur kerja.
+Sebagai user, saya ingin Tweet Twitter saya muncul di Neurohub, sehingga peneliti lain di pusat tersebut dapat melihat apa yang sedang saya lakukan.
+Sebagai user, saya ingin melihat kalender bersama milik kelompok melalui halaman Web Node Neurohub serta di perangkat seluler saya.
+Sebagai user, saya ingin menyinkronkan acara yang dibuat di NeuroHub dengan Kalender berbasis web seperti Google Calendar.
+Sebagai researcher, saya ingin memiliki kemampuan untuk memasukkan simbol Yunani ke dalam entri buku log saya.
+Sebagai user, saya ingin memiliki kemampuan untuk memindahkan beberapa berkas dan mengaturnya kembali menggunakan peramban berkas Neurohub saat memproses data.
+Sebagai researcher, saya ingin mengarahkan klien Mendeley saya ke repositori makalah penelitian bersama di tingkat kelompok dan mendapatkan pemberitahuan melalui Mendeley saat konten baru ditambahkan.
+Sebagai researcher, saya ingin memiliki dukungan elektronik untuk melacak kumpulan data mana yang digunakan/dikeluarkan/dimodifikasi sebagai bagian dari eksperimen tertentu.
+Sebagai user, saya ingin mekanisme untuk berbagi makalah dan catatan secara elektronik dengan peneliti lain, sehingga kita dapat berkolaborasi secara efektif.
+Sebagai researcher, saya ingin memiliki layanan untuk mendukung kurasi data jangka panjang, sehingga saya dapat yakin bahwa data tidak akan 'hilang' seiring berjalannya waktu.
+Sebagai researcher, saya ingin memiliki tampilan garis waktu dari beberapa berkas data dan gambar terkaitnya, sehingga saya dapat membandingkan data yang diambil dari eksperimen pada tanggal tertentu.
+Sebagai researcher, saya ingin memiliki akses jarak jauh ke data saya untuk bekerja di luar lokasi, sehingga saya tetap dapat bekerja secara efektif saat berada jauh dari lab.
+Sebagai researcher, saya ingin membagikan tulisan pasca-eksperimen dengan peneliti lain, sehingga orang lain dapat lebih mudah mereplikasi karya saya.
+Sebagai researcher, saya ingin mengumpulkan data sebagai perpustakaan data, yang kemudian dapat digunakan oleh satu atau beberapa eksperimen yang ditentukan pada tahap selanjutnya.
+Sebagai researcher, saya ingin menunjukkan di dalam buku log elektronik saya data eksperimen mana yang baik/buruk, menyembunyikan data yang buruk, tetapi tetap menyimpannya di dalam sistem untuk berjaga-jaga jika berguna di masa mendatang.
+Sebagai researcher, saya ingin sistem menyediakan metadata standar, yang dapat digunakan oleh semua peneliti di pusat tersebut (dan seterusnya), sehingga kita dapat lebih memahami data satu sama lain.
+Sebagai researcher, saya ingin gambar fisiologi dianotasi dengan metadata standar, sehingga data saya nantinya dapat dicari dan dipahami.
+Sebagai researcher, saya ingin memiliki kemampuan untuk melampirkan metadata standar untuk observasi perilaku (dan video), sehingga data saya nantinya dapat dicari dan dipahami.
+Sebagai researcher, saya ingin memiliki kemampuan untuk melampirkan metadata standar untuk respons obat, sehingga data saya nantinya dapat dicari dan dipahami.
+Sebagai researcher, saya ingin memiliki kemampuan untuk mencari gambar sel menggunakan metadata standar.
+Sebagai researcher, saya ingin setidaknya beberapa metadata dimasukkan secara otomatis saat data baru ditambahkan ke sistem.
+Sebagai researcher, saya ingin memiliki kemampuan untuk melampirkan metadata terperinci ke data dan entri yang saya buat.
+Sebagai researcher, saya ingin memiliki kemampuan untuk memilih templat yang terisi sebagian sebelumnya yang sudah berisi metadata yang biasa dimasukkan saat menambahkan data baru ke sistem, sehingga saya tidak membuang waktu memasukkan metadata yang sama berulang kali untuk setiap berkas atau entri buku log individu.
+Sebagai user, saya ingin yakin bahwa metadata yang ada yang sesuai dengan berkas tidak hilang saat memindahkan berkas ke lokasi baru.
+Sebagai researcher, saya ingin memiliki kemampuan untuk membentuk tautan antar objek, misalnya Berkas A adalah analisis dari Berkas B, sehingga data dapat dicari berdasarkan jenis dan berdasarkan asosiasi.
+Sebagai researcher, saya ingin memiliki kemampuan untuk menemukan berkas eksperimen menggunakan metadata, terlepas dari di mana berkas tersebut berada.
+Sebagai researcher, saya ingin setiap data yang telah saya tulis ke VRE dilindungi dari modifikasi atau penghapusan, sehingga data asli selalu dapat dilacak kembali ke eksperimen dan titik waktu tertentu.
+Sebagai user, saya ingin memiliki kemampuan untuk menjaga data saya tetap pribadi di sistem, dan hanya membagikan data yang saya anggap harus dibagikan.
+Sebagai researcher, saya ingin memiliki kemampuan untuk menyimpan semua input untuk suatu eksperimen sehingga asal-usul hasil dapat diverifikasi.
+Sebagai researcher, saya ingin memiliki kemampuan untuk mencari berkas berdasarkan jenis dan format berkas.
+Sebagai researcher, saya ingin memiliki kemampuan untuk mengunggah direktori dan berkas secara massal dengan upaya minimal.
+Sebagai researcher, saya ingin mengaitkan metadata ke grup secara keseluruhan pada suatu titik waktu setelah pengunggahan massal selesai, sehingga saya memiliki periode waktu untuk mempertimbangkan nilai yang sesuai untuk metadata tersebut.
+Sebagai user, saya ingin memiliki kemampuan untuk mengubah pembagian dan kepemilikan beberapa berkas.
+Sebagai researcher, saya ingin memiliki kemampuan untuk membatasi data yang saya bagikan ke peneliti atau kelompok peneliti tertentu.
+Sebagai researcher, saya ingin memiliki kemampuan untuk menemukan dan mengakses data yang ingin dibagikan rekan kerja.
+Sebagai researcher, saya ingin memiliki kemampuan untuk berinteraksi dengan sistem kontrol revisi sehingga saya dapat melacak perubahan berkas dari waktu ke waktu.
+Sebagai JuniorResearcher, saya ingin memiliki kemampuan untuk memanen pengetahuan dari dalam kelompok, sehingga saya dapat belajar dari peneliti yang lebih berpengalaman.
+Sebagai researcher, saya ingin akses jarak jauh yang aman ke node Neurohub saat bekerja jauh dari laboratorium
+Sebagai researcher, saya ingin memiliki repositori tingkat kelompok untuk berbagi makalah/ulasan/komentar dengan peneliti lain.
+Sebagai researcher, saya ingin detail rencana alur kerja serta riwayat eksekusi dan hasil dicatat di Neurohub saat mengeksekusi alur kerja
