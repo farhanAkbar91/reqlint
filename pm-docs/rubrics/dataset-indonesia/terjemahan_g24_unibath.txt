@@ -1,0 +1,53 @@
+Sebagai depositor, saya ingin menyetor dan memelihara kumpulan data melalui antarmuka web sederhana, sehingga saya tidak perlu menginstal dan mempelajari perangkat lunak baru untuk menyetor.
+Sebagai depositor, saya ingin memiliki antarmuka pengguna yang familiar bagi saya, sehingga saya merasa semua sistem Universitas terhubung.
+Sebagai depositor, saya ingin menyetor dan memelihara kumpulan data melalui Pure, sehingga saya memiliki tempat serba ada untuk mengelola hasil penelitian saya.
+Sebagai depositor, saya ingin menyetor dan memelihara kumpulan data melalui Lingkungan Penelitian Virtual dan alat alur kerja lainnya, sehingga saya dapat terus bekerja dengan alat yang sudah saya kenal.
+Sebagai depositor, saya ingin menyetorkan berkas yang saya miliki, sehingga saya tidak perlu menghabiskan banyak waktu untuk mencari versi yang tepat dan mengonversi ke format yang tepat.
+Sebagai depositor, saya ingin menempatkan data di bawah embargo, sehingga hak penggunaan pertama saya terlindungi, dan saya dapat memenuhi tanggung jawab kerahasiaan saya.
+Sebagai depositor, saya ingin menerapkan lisensi pada kumpulan data, sehingga hak IP saya dilindungi dengan tepat.
+Sebagai depositor, saya ingin mengizinkan kolaborator saya akses istimewa ke kumpulan data, sehingga kami terus memiliki hubungan yang produktif.
+Sebagai depositor, saya ingin menyetor berkas yang besarnya sembarang, sehingga saya tidak dibatasi dalam berkas apa yang dapat dan tidak dapat saya setorkan.
+Sebagai depositor, saya ingin menautkan kumpulan data ke publikasi di Opus, sehingga data dan publikasi saya lebih mudah ditemukan.
+Sebagai depositor, saya ingin mencetak DOI untuk data saya, sehingga data tersebut dapat ditemukan dan dikutip dengan lebih mudah dan sitasi dapat dilacak sehingga saya dapat menerima kredit.
+Sebagai depositor, saya ingin metadata diisi secara otomatis dari sistem Universitas lain dan diingat dari setoran sebelumnya, sehingga saya tidak perlu membuang waktu memasukkan kembali informasi yang sama.
+Sebagai depositor, saya ingin menautkan ke data yang disimpan di repositori eksternal, sehingga saya dapat menyimpan data saya di repositori yang sesuai tetapi tetap mendaftarkannya ke Universitas dan saya tidak perlu menyetorkan data saya di banyak tempat.
+Sebagai depositor, saya ingin menentukan kebijakan pembuangan untuk data saya, sehingga saya tidak secara tidak sengaja melanggar hukum atau perjanjian kolaborasi.
+Sebagai depositor, saya ingin melacak unduhan data saya, sehingga saya dapat menunjukkan dampak dari pekerjaan saya.
+Sebagai depositor, saya ingin melacak sitasi data saya, sehingga saya dapat menunjukkan dampak dari pekerjaan saya
+Sebagai depositor, saya ingin memiliki jaminan tentang integritas data, sehingga saya dapat menggunakan data saya di masa depan dan saya dapat memenuhi persyaratan penyandang dana untuk pengarsipan.
+Sebagai depositor, saya ingin melampirkan metadata keterlacakan khusus subjek ke rekaman, sehingga peneliti dalam disiplin ilmu saya dapat menemukan data saya dengan lebih mudah.
+Sebagai depositor, saya ingin menautkan kumpulan data dengan DMP proyek, sehingga kepatuhan terhadap DMP dapat ditunjukkan dan seluruh alur kerja proyek saling terhubung.
+Sebagai depositor, saya ingin mengelola dan membagikan data penelitian "langsung", sehingga seluruh alur kerja proyek saling terhubung.
+Sebagai depositor, saya ingin mengelola beberapa versi dari kumpulan data yang sama, sehingga perubahan pada kumpulan data transparan dan tidak mengorbankan integritas penelitian.
+Sebagai depositor, saya ingin mengizinkan orang lain menyetor atas nama saya, sehingga saya dapat mendelegasikan tugas pengelolaan data penelitian dengan tepat.
+Sebagai data reuser, saya ingin mencari di arsip melalui web, sehingga saya dapat dengan mudah menemukan data yang relevan dengan kebutuhan saya.
+Sebagai data reuser, saya ingin mengakses sistem dalam bahasa ibu saya, sehingga saya tidak terhalang menggunakan kembali data University of Bath oleh kendala bahasa.
+Sebagai data reuser, saya ingin memeriksa dan mengidentifikasi berkas yang disetor, sehingga saya dapat membuat penilaian awal tentang kegunaannya tanpa mengunduh seluruh kumpulan data.
+Sebagai data reuser, saya ingin melihat contoh sitasi untuk suatu kumpulan data, sehingga saya dapat merujuknya dengan benar.
+Sebagai data reuser, saya ingin melihat DOI untuk suatu kumpulan data, sehingga saya dapat kembali ke data tersebut di masa mendatang dan saya dapat mengimpor kumpulan data tersebut ke dalam perangkat lunak manajemen referensi saya secara otomatis.
+Sebagai data reuser, saya ingin mendapatkan URL persisten untuk suatu kumpulan data, sehingga saya dapat kembali ke data tersebut di masa mendatang.
+Sebagai data reuser, saya ingin mencari di arsip melalui Primo , sehingga saya dapat mencari buku, artikel, dan data semuanya di satu tempat.
+Sebagai data reuser, saya ingin melihat versi berbeda dari suatu kumpulan data secara sekilas, sehingga saya dapat yakin bahwa saya menggunakan versi yang tepat dari kumpulan data tersebut.
+Sebagai externalcollaborator, saya ingin mendapatkan akses istimewa ke data untuk proyek tempat saya terlibat, sehingga saya dapat berkolaborasi secara efektif.
+Sebagai externalcoordinator, saya ingin memiliki jaminan bahwa hak IP saya tidak akan dilanggar, sehingga risiko berkolaborasi dengan Bath dapat saya terima.
+Sebagai externalcoordinator, saya ingin mengakses data dari kolaborator Bath di luar kampus, sehingga saya dapat berkolaborasi secara efektif.
+Sebagai research facility manager, saya ingin menyetor data dari fasilitas saya langsung ke dalam arsip atas nama peneliti, sehingga saya tidak lagi diharuskan memelihara arsip data fasilitas saya sendiri dan peneliti dapat mengakses data mereka sendiri sesuai kebutuhan.
+Sebagai Bath Data Archive administrator, saya ingin melakukan beberapa pemeriksaan pada kumpulan data yang disetor sebelum dipublikasikan, sehingga kualitas metadata yang konsisten tetap terjaga, kepatuhan terhadap kebijakan dapat diperiksa, dan rincian perizinan dapat diperiksa.
+Sebagai Bath Data Archive administrator, saya ingin mewajibkan serangkaian metadata minimum, sehingga kualitas metadata yang konsisten tetap terjaga.
+Sebagai Bath Data Archive administrator, saya ingin menyetujui pembuangan data yang dijadwalkan, sehingga data yang masih diperlukan tidak dimusnahkan.
+Sebagai Bath Data Archive administrator, saya ingin mengkueri seluruh arsip , sehingga saya dapat melaporkan aspek-aspek tertentu dari kepemilikan arsip.
+Sebagai Bath Data Archive administrator, saya ingin mengimpor data Bath dari pusat data eksternal secara keseluruhan, sehingga kepemilikan data Bath di arsip eksternal tidak hilang jika mereka tutup.
+Sebagai Bath Data Archive administrator, saya ingin mendorong dan mempromosikan penggunaan standar terbuka untuk setoran, sehingga data dapat digunakan kembali semaksimal mungkin.
+Sebagai Research Information manager, saya ingin mengintegrasikan arsip dengan CRIS, sehingga saya dapat menganalisis dampak publikasi data penelitian Saya dapat menghubungkan pendanaan ke semua keluaran yang dihasilkannya.
+Sebagai Research Information manager, saya ingin memasukkan rekaman untuk data yang disimpan secara eksternal lengkap, sehingga catatan universitas tentang kepemilikan data menjadi lengkap.
+Sebagai Research Information manager, saya ingin melacak jumlah sitasi untuk kumpulan data yang diterbitkan, sehingga dampak kumpulan data dalam dunia akademis dapat ditunjukkan.
+Sebagai Research Information manager, saya ingin menyegmentasikan statistik tampilan dan unduhan berdasarkan negara dan sektor sehingga dampak kumpulan data di luar dunia akademis dapat ditunjukkan.
+Sebagai Research Information manager, saya ingin kumpulan data ditautkan ke metadata tentang proyek, sehingga saya dapat melaporkan proyek yang menyetor kumpulan data sehubungan dengan persyaratan penyandang dana.
+Sebagai an UnivITservice, saya ingin menyimpan data yang diarsipkan pada sistem penyimpanan yang ada, sehingga penyimpanan data universitas konsisten dan dapat dipelihara serta ketersediaan data di masa depan dapat dijamin.
+Sebagai an UnivITservice, saya ingin mengintegrasikan arsip dengan sistem universitas yang ada seperti LDAP, sehingga biaya administrasi sistem dapat ditekan.
+Sebagai an UnivITservice, saya ingin menyimpan data yang diarsipkan langsung di penyimpanan objek HCP, sehingga fitur dapat dibuat.
+Sebagai an UnivITservice, saya ingin dapat mengekspor semua data ke sistem yang berbeda, sehingga saya tidak terikat pada satu sistem yang mungkin bukan yang paling tepat di masa mendatang.
+Sebagai developer, saya ingin menyetor dan memelihara kumpulan data melalui API seperti SWORD2, sehingga layanan saya dapat berinteraksi dengan arsip.
+Sebagai an academicpublisher, saya ingin membuat tautan web persisten antara artikel saya dan kumpulan data yang mendasarinya, sehingga jurnal saya dapat dilihat diisi dengan penelitian yang kuat dan berkualitas tinggi.
+Sebagai fundingbody, saya ingin diyakinkan kembali bahwa peneliti yang saya danai memiliki rencana pengarsipan yang kuat untuk data mereka, sehingga saya dapat yakin bahwa mendanai mereka adalah investasi yang berharga.
+Sebagai fundingbody, saya ingin memanen metadata tentang keluaran dari penelitian yang saya danai, sehingga saya dapat menganalisis keefektifan strategi pendanaan dan saya dapat mendorong fertilisasi silang dari keluaran penelitian.

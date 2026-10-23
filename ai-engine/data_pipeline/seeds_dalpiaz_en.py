@@ -60,4 +60,88 @@ DALPIAZ_ENGLISH_SEEDS = [
     {"source_id": "dalpiaz_log_038", "text": "As a warehouse supervisor, I want to scan pallet RFID tags upon arrival, so that inventory databases update instantaneously."},
     {"source_id": "dalpiaz_log_039", "text": "As a customer, I want to select preferred delivery time slots, so that I am available to receive packages."},
     {"source_id": "dalpiaz_log_040", "text": "As a courier, I want the navigation app to optimize delivery stop sequences, so that transit mileage is minimized."}
+
+    # G04 - Content Management & Digital Publishing
+    {"source_id": "dalpiaz_cms_041", "text": "As an editor, I want to schedule article publication timestamps in advance, so that content goes live during peak readership hours."},
+    {"source_id": "dalpiaz_cms_042", "text": "As a writer, I want to save drafts automatically every two minutes, so that progress is not lost during network interruptions."},
+    {"source_id": "dalpiaz_cms_043", "text": "As a site administrator, I want to assign role-based editing permissions to authors, so that unauthorized personnel cannot publish live changes."},
+    {"source_id": "dalpiaz_cms_044", "text": "As a content creator, I want to crop and compress uploaded images directly in the browser, so that web page loading speeds remain optimal."},
+    {"source_id": "dalpiaz_cms_045", "text": "As an archivist, I want to restore earlier document revisions from the version history, so that unintended text modifications can be rolled back."},
+
+    # Cybersecurity, IAM & Compliance
+    {"source_id": "dalpiaz_sec_046", "text": "As a security administrator, I want to enforce multi-factor authentication for all remote logins, so that unauthorized credential use is prevented."},
+    {"source_id": "dalpiaz_sec_047", "text": "As a compliance officer, I want to export immutable system audit logs, so that security incident forensics meet regulatory mandates."},
+    {"source_id": "dalpiaz_sec_048", "text": "As a network engineer, I want to receive automated alerts upon detection of anomalous traffic spikes, so that potential DDoS attacks are neutralized rapidly."},
+    {"source_id": "dalpiaz_sec_049", "text": "As a system user, I want to reset my expired password via a self-service verification email, so that I regain platform access without IT intervention."},
+    {"source_id": "dalpiaz_sec_050", "text": "As a database administrator, I want to encrypt sensitive database fields at rest, so that stored data remains protected in the event of hardware theft."},
+
+    # Customer Support & CRM
+    {"source_id": "dalpiaz_crm_051", "text": "As a support agent, I want to merge duplicate customer inquiry tickets, so that communication history is unified across channels."},
+    {"source_id": "dalpiaz_crm_052", "text": "As a team lead, I want to assign high-priority tickets automatically to available senior staff, so that service level agreement breaches are avoided."},
+    {"source_id": "dalpiaz_crm_053", "text": "As a customer, I want to view my open support tickets in a self-service portal, so that I can monitor issue resolution progress."},
+    {"source_id": "dalpiaz_crm_054", "text": "As a helpdesk specialist, I want to insert pre-approved canned responses into replies, so that recurring questions are addressed efficiently."},
+    {"source_id": "dalpiaz_crm_055", "text": "As an operations manager, I want to generate weekly first-contact resolution metrics, so that support staffing needs can be evaluated."},
+
+    # Travel, Hospitality & Booking
+    {"source_id": "dalpiaz_travel_056", "text": "As a traveler, I want to filter hotel searches by refundable cancellation policies, so that I retain financial flexibility if travel plans shift."},
+    {"source_id": "dalpiaz_travel_057", "text": "As a passenger, I want to choose my airplane seat on an interactive cabin layout map, so that I secure my preferred seating arrangement."},
+    {"source_id": "dalpiaz_travel_058", "text": "As a front desk clerk, I want to mark hotel room turnover states as inspected, so that housekeeping readiness is clear before guest check-in."},
+    {"source_id": "dalpiaz_travel_059", "text": "As a vacationer, I want to download boarding passes directly into my mobile wallet, so that airport check-in is frictionless without physical paper."},
+    {"source_id": "dalpiaz_travel_060", "text": "As a hotel manager, I want to adjust seasonal room pricing tiers dynamically, so that occupancy rates and room revenue are maximized."},
+
+    # Human Resources & Talent Acquisition
+    {"source_id": "dalpiaz_hr_061", "text": "As a recruiter, I want to parse applicant resume PDFs for specific programming keywords, so that candidate shortlisting is streamlined."},
+    {"source_id": "dalpiaz_hr_062", "text": "As a job applicant, I want to track my recruitment pipeline status online, so that I know whether my portfolio has reached the interview stage."},
+    {"source_id": "dalpiaz_hr_063", "text": "As an employee, I want to submit annual leave requests via the portal calendar, so that my supervisor can review and approve scheduling."},
+    {"source_id": "dalpiaz_hr_064", "text": "As an HR manager, I want to track team mandatory compliance training completion rates, so that corporate policy certifications stay current."},
+    {"source_id": "dalpiaz_hr_065", "text": "As a department manager, I want to document quarterly performance evaluation milestones, so that promotion reviews are based on documented achievements."},
+
+    # Media Streaming & Entertainment
+    {"source_id": "dalpiaz_media_066", "text": "As a subscriber, I want to adjust video playback speeds from 0.5x to 2.0x, so that I consume instructional content at my own pace."},
+    {"source_id": "dalpiaz_media_067", "text": "As a viewer, I want to resume video playback from the exact timestamp I paused on another device, so that cross-platform continuity is maintained."},
+    {"source_id": "dalpiaz_media_068", "text": "As a listener, I want to download audio tracks for offline playback, so that I can listen to playlists without mobile data coverage."},
+    {"source_id": "dalpiaz_media_069", "text": "As a parent, I want to configure content age-rating filters on child profiles, so that mature programs remain inaccessible to young viewers."},
+    {"source_id": "dalpiaz_media_070", "text": "As a user, I want to search movies by director and cast members, so that I discover relevant filmographies efficiently."},
+
+    # Telecommunications & Network Infrastructure
+    {"source_id": "dalpiaz_telecom_071", "text": "As a subscriber, I want to view remaining cellular data balances in real time, so that unexpected bandwidth overage fees are prevented."},
+    {"source_id": "dalpiaz_telecom_072", "text": "As a network technician, I want to run remote ping and traceroute diagnostics on cell towers, so that hardware outages are isolated quickly."},
+    {"source_id": "dalpiaz_telecom_073", "text": "As a customer, I want to purchase international roaming data packages through the mobile application, so that connectivity is instant upon arrival abroad."},
+    {"source_id": "dalpiaz_telecom_074", "text": "As an infrastructure engineer, I want to monitor base transceiver station battery backups, so that power grid failures do not sever emergency communications."},
+    {"source_id": "dalpiaz_telecom_075", "text": "As an account holder, I want to enable automatic monthly data plan renewals, so that mobile network services operate without disruption."},
+
+    # Energy, Utilities & Sustainability
+    {"source_id": "dalpiaz_energy_076", "text": "As a facility manager, I want to track peak power load intervals across commercial buildings, so that high-demand utility penalties are minimized."},
+    {"source_id": "dalpiaz_energy_077", "text": "As a resident, I want to receive SMS notifications regarding scheduled water maintenance shutoffs, so that domestic tasks can be prepared beforehand."},
+    {"source_id": "dalpiaz_energy_078", "text": "As a solar panel owner, I want to measure net kilowatt-hour power fed back into the electrical grid, so that utility feed-in tariff credits are accurately computed."},
+    {"source_id": "dalpiaz_energy_079", "text": "As a meter inspector, I want to record residential gas consumption readings on an offline mobile tablet, so that rural readings sync automatically when reconnected."},
+    {"source_id": "dalpiaz_energy_080", "text": "As an environmental analyst, I want to export facility greenhouse gas emission records, so that corporate carbon sustainability reports satisfy government guidelines."},
+
+    # Project Collaboration & Issue Tracking
+    {"source_id": "dalpiaz_collab_081", "text": "As a developer, I want to link Git commit hashes to issue tracker tickets, so that code changes can be traced back to business requirements."},
+    {"source_id": "dalpiaz_collab_082", "text": "As a project manager, I want to visualize task dependencies on an interactive Gantt chart, so that critical path bottlenecks are identified early."},
+    {"source_id": "dalpiaz_collab_083", "text": "As a scrum master, I want to track sprint velocity trends across consecutive iterations, so that sprint capacity planning is grounded in historical velocity."},
+    {"source_id": "dalpiaz_collab_084", "text": "As a team member, I want to mention colleagues using their username in task comment threads, so that relevant collaborators are notified directly."},
+    {"source_id": "dalpiaz_collab_085", "text": "As a product owner, I want to drag and drop backlog items to reprioritize deliverables, so that upcoming sprint priorities reflect stakeholder feedback."},
+
+    # EdTech & E-Learning Platforms
+    {"source_id": "dalpiaz_edu_086", "text": "As an instructor, I want to configure randomized quiz question orders, so that academic integrity is upheld during online examinations."},
+    {"source_id": "dalpiaz_edu_087", "text": "As a student, I want to download supplementary reading PDFs for offline study, so that learning can continue during travel without internet."},
+    {"source_id": "dalpiaz_edu_088", "text": "As a teaching assistant, I want to grade student assignments using standardized rubrics, so that assessment criteria remain consistent across all submissions."},
+    {"source_id": "dalpiaz_edu_089", "text": "As a learner, I want to generate course completion certificates with unique verification IDs, so that credentials can be confirmed by prospective employers."},
+    {"source_id": "dalpiaz_edu_090", "text": "As a course creator, I want to embed interactive coding sandboxes within modules, so that students can execute exercises directly inside their web browser."},
+
+    # LegalTech & Contract Management
+    {"source_id": "dalpiaz_legal_091", "text": "As a legal counsel, I want to compare two versions of a service agreement side by side, so that contractual revisions are pinpointed accurately."},
+    {"source_id": "dalpiaz_legal_092", "text": "As a procurement specialist, I want to receive automated contract renewal reminders 60 days before expiration, so that renegotiations begin before services lapse."},
+    {"source_id": "dalpiaz_legal_093", "text": "As a corporate signatory, I want to sign documents using cryptographic digital signatures, so that the legal validity of commercial contracts is assured."},
+    {"source_id": "dalpiaz_legal_094", "text": "As a paralegal, I want to redact personal identifying information across court filings, so that privacy guidelines are respected before public disclosure."},
+    {"source_id": "dalpiaz_legal_095", "text": "As a compliance auditor, I want to search contract archives by governing jurisdiction clauses, so that regional legal exposure can be audited efficiently."},
+
+    # Autonomous & Connected Vehicles
+    {"source_id": "dalpiaz_auto_096", "text": "As an electric vehicle driver, I want to locate available fast-charging stations along a planned route, so that range anxiety is avoided on road trips."},
+    {"source_id": "dalpiaz_auto_097", "text": "As a car owner, I want to trigger cabin pre-conditioning through my smartphone app, so that the interior is warmed up prior to winter departure."},
+    {"source_id": "dalpiaz_auto_098", "text": "As a vehicle maintenance technician, I want to read onboard diagnostic error codes over Bluetooth, so that powertrain sensor issues are diagnosed quickly."},
+    {"source_id": "dalpiaz_auto_099", "text": "As a driver, I want to receive over-the-air firmware updates for the infotainment console, so that system bug fixes install without a service center visit."},
+    {"source_id": "dalpiaz_auto_100", "text": "As a fleet dispatcher, I want to receive geofence exit alerts when fleet vehicles depart assigned routes, so that unauthorized vehicle operation is detected."}
 ]
