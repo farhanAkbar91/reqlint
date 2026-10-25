@@ -11,6 +11,7 @@ COPY ai-engine/requirements-ai.txt /app/requirements-ai.txt
 
 RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install --no-cache-dir -r requirements-ai.txt
+RUN python -m spacy download en_core_web_sm
 
 # Copy source code
 COPY backend /app/backend
