@@ -1,0 +1,439 @@
+import os
+import glob
+import joblib
+import warnings
+import pandas as pd
+import numpy as np
+
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import StratifiedKFold, cross_val_predict
+from sklearn.metrics import f1_score, accuracy_score, precision_score, recall_score
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+
+warnings.filterwarnings("ignore")
+
+# =====================================================================
+# 1. KONFIGURASI DIREKTORI & TARGET
+# =====================================================================
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+FOLDERS = {
+    "id": os.path.join(BASE_DIR, "dataset-indo-label-final"),
+    "en": os.path.join(BASE_DIR, "dataset-eng-label-final"),
+}
+MODEL_OUT_DIR = os.path.join(BASE_DIR, "models")
+TARGET_COLS = ["y_I", "y_N", "y_V", "y_E", "y_S", "y_T"]
+
+# Opsional: Gunakan multilingual-e5 jika sentence-transformers sudah diinstal
+USE_E5_EMBEDDING = False
+_e5_model = None
+
+def get_embedding_similarity(texts):
+    """Menghitung matriks kemiripan antar-story dalam 1 file backlog."""
+    global _e5_model
+    if len(texts) <= 1:
+        return np.zeros((len(texts), len(texts)))
+
+    if USE_E5_EMBEDDING:
+        try:
+            from sentence_transformers import SentenceTransformer
+            if _e5_model is None:
+                print("[Info] Memuat model intfloat/multilingual-e5-base...")
+                _e5_model = SentenceTransformer("intfloat/multilingual-e5-base")
+            vecs = _e5_model.encode(["query: " + t for t in texts], normalize_embeddings=True)
+            sim_matrix = vecs @ vecs.T
+            np.fill_diagonal(sim_matrix, 0.0)
+            return sim_matrix
+        except ImportError:
+            print("[Info] sentence-transformers belum terpasang, beralih ke TF-IDF.")
+
+    # Fallback cepat & ringan dengan TF-IDF karakter + kata
+    vec = TfidfVectorizer(ngram_range=(1, 2), min_df=1).fit_transform(texts)
+    sim_matrix = cosine_similarity(vec)
+    np.fill_diagonal(sim_matrix, 0.0)
+    return sim_matrix
+
+
+# =====================================================================
+# 2. LAPISAN 1 & 3: EKSTRAKSI FITUR DWIBAHASA (INTERPRETABLE FEATURES)
+# =====================================================================
+LEXICON = {
+    "id": {
+        "role": r"^\s*(sebagai)\b",
+        "want": r"\b(saya ingin|ingin|saya mau|saya butuh|dapat)\b",
+        "benefit": r"\b(agar|untuk|supaya|sehingga|guna)\b",
+        "conj": r"\b(dan|serta|atau|maupun|sekaligus)\b",
+        "ambiguous": r"\b(cepat|mudah|memahami|kustom|fleksibel|efisien|otomatis|sesuai|terkait|berbagai|optimal|baik|nyaman|aman|lengkap)\b",
+        "prescriptive": r"\b(frontend|backend|database|sql|tabel|button|tombol|dropdown|api|json|css|html|endpoint|klik|halaman|form|modal)\b",
+        "dependency_word": r"\b(setelah|sebelum|jika sudah|bergantung pada|mengikuti)\b",
+    },
+    "en": {
+        "role": r"^\s*(as a|as an)\b",
+        "want": r"\b(i want|i would like|i need|i can|to be able to)\b",
+        "benefit": r"\b(so that|in order to|so i can|to ensure|to allow|to support)\b",
+        "conj": r"\b(and|or|as well as|along with|plus)\b",
+        "ambiguous": r"\b(fast|easy|easily|quickly|understand|custom|flexible|efficient|automatic|appropriate|various|user-friendly|seamless|intuitive|properly)\b",
+        "prescriptive": r"\b(frontend|backend|database|sql|table|button|dropdown|api|json|css|html|endpoint|click|page|form|modal|checkbox)\b",
+        "dependency_word": r"\b(after|before|once|depending on|requires)\b",
+    },
+}
+
+FEATURE_NAMES = [
+    "word_count",
+    "char_count",
+    "has_role",
+    "has_want",
+    "has_benefit",
+    "conj_count",
+    "comma_count",
+    "ambiguous_count",
+    "prescriptive_count",
+    "dependency_word_count",
+    "has_number_metric",
+    "max_sim_backlog",
+    "mean_top3_sim_backlog",
+    "sim_over_05_count",
+]
+
+def extract_features_for_backlog(df, lang_code):
+    """Mengekstrak fitur Lapisan 1 dan Lapisan 3 untuk 1 file CSV (1 backlog)."""
+    rules = LEXICON.get(lang_code, LEXICON["id"])
+    texts = df["text"].fillna("").astype(str)
+
+    feats = pd.DataFrame(index=df.index)
+    feats["word_count"] = texts.apply(lambda x: len(x.split()))
+    feats["char_count"] = texts.apply(len)
+    feats["has_role"] = texts.str.contains(rules["role"], case=False, regex=True).astype(int)
+    feats["has_want"] = texts.str.contains(rules["want"], case=False, regex=True).astype(int)
+    feats["has_benefit"] = texts.str.contains(rules["benefit"], case=False, regex=True).astype(int)
+    feats["conj_count"] = texts.str.count(rules["conj"])
+    feats["comma_count"] = texts.str.count(r",")
+    feats["ambiguous_count"] = texts.str.count(rules["ambiguous"])
+    feats["prescriptive_count"] = texts.str.count(rules["prescriptive"])
+    feats["dependency_word_count"] = texts.str.count(rules["dependency_word"])
+    feats["has_number_metric"] = texts.str.contains(r"\b\d+\b", regex=True).astype(int)
+
+    # Lapisan 3: Kemiripan di dalam backlog proyek yang sama
+    sim_matrix = get_embedding_similarity(texts.tolist())
+    feats["max_sim_backlog"] = sim_matrix.max(axis=1)
+    # Rata-rata 3 story paling mirip di backlog
+    sorted_sim = np.sort(sim_matrix, axis=1)[:, ::-1]
+    top_k = min(3, sim_matrix.shape[1])
+    feats["mean_top3_sim_backlog"] = sorted_sim[:, :top_k].mean(axis=1) if top_k > 0 else 0.0
+    feats["sim_over_05_count"] = (sim_matrix > 0.50).sum(axis=1)
+
+    return feats[FEATURE_NAMES]
+
+
+# =====================================================================
+# 3. PEMUATAN DATA DARI 2 FOLDER (INDO & ENG)
+# =====================================================================
+def load_all_data():
+    all_dfs, all_feats = [], []
+
+    for lang_code, folder_path in FOLDERS.items():
+        if not os.path.exists(folder_path):
+            print(f"[Peringatan] Folder tidak ditemukan: {folder_path}")
+            continue
+
+        csv_files = sorted(glob.glob(os.path.join(folder_path, "*.csv")))
+        for fpath in csv_files:
+            try:
+                df = pd.read_csv(fpath)
+            except Exception as e:
+                print(f"[Error] Gagal membaca {fpath}: {e}")
+                continue
+
+            if "text" not in df.columns:
+                continue
+
+            df["_file_path"] = fpath
+            df["_file_name"] = os.path.basename(fpath)
+            df["_row_idx"] = df.index
+            df["_lang"] = lang_code
+
+            feats = extract_features_for_backlog(df, lang_code)
+            all_dfs.append(df)
+            all_feats.append(feats)
+
+    if not all_dfs:
+        raise RuntimeError("Tidak ada file CSV yang berhasil dimuat dari kedua folder!")
+
+    full_df = pd.concat(all_dfs, ignore_index=True)
+    full_X = pd.concat(all_feats, ignore_index=True)
+    return full_df, full_X
+
+
+def build_classifier(use_ebm=False):
+    """Memilih model White-Box: EBM (jika interpret tersedia) atau Logistic Regression."""
+    if use_ebm:
+        try:
+            from interpret.glassbox import ExplainableBoostingClassifier
+            return ExplainableBoostingClassifier(interactions=0, random_state=42)
+        except ImportError:
+            pass
+    return LogisticRegression(class_weight="balanced", max_iter=1000, random_state=42)
+
+
+def update_csv_row(row_meta, new_labels):
+    """Menyimpan label hasil koreksi/anotasi langsung kembali ke file CSV aslinya."""
+    fpath = row_meta["_file_path"]
+    r_idx = int(row_meta["_row_idx"])
+
+    orig_df = pd.read_csv(fpath)
+    for col, val in zip(TARGET_COLS, new_labels):
+        orig_df.loc[r_idx, col] = float(val)
+
+    orig_df.loc[r_idx, "label_target"] = 1.0
+    orig_df.loc[r_idx, "annotator_a"] = float(1.0 if sum(new_labels) == 6 else 0.0)
+    if pd.isna(orig_df.loc[r_idx, "split"]) or str(orig_df.loc[r_idx, "split"]).strip() == "":
+        orig_df.loc[r_idx, "split"] = "train"
+
+    orig_df.to_csv(fpath, index=False)
+    print(f"  [Tersimpan] Baris #{r_idx + 1} di '{row_meta['_file_name']}' berhasil diperbarui!")
+
+
+# =====================================================================
+# 4. MODE 1: RELABEL 5 DATA BERLABEL DENGAN ERROR TERBURUK (CONFIDENT LEARNING)
+# =====================================================================
+def mode_relabel_worst_5(full_df, full_X, top_k=5):
+    """
+    Mencari 5 baris yang SUDAH DILABELI tetapi prediksi model paling melenceng jauh
+    dari label manual (akurasi paling jelek), untuk dilabeli ulang/dikoreksi.
+    """
+    is_labeled = full_df[TARGET_COLS].notna().all(axis=1)
+    df_lab = full_df[is_labeled].copy()
+    X_lab = full_X.loc[is_labeled].copy()
+
+    if len(df_lab) < 10:
+        print("[!] Data berlabel masih terlalu sedikit (<10 baris) untuk evaluasi error.")
+        return
+
+    error_matrix = np.zeros((len(df_lab), len(TARGET_COLS)))
+    pred_probs = pd.DataFrame(index=df_lab.index, columns=TARGET_COLS, dtype=float)
+
+    for i, col in enumerate(TARGET_COLS):
+        y = df_lab[col].astype(int)
+        if y.nunique() < 2 or y.value_counts().min() < 2:
+            print(f"  [Info] {col} belum punya cukup variasi kelas 0 dan 1 (dilewati dari perhitungan error).")
+            pred_probs[col] = y.astype(float)
+            continue
+
+        n_splits = min(5, int(y.value_counts().min()))
+        clf = build_classifier(use_ebm=False)
+        if n_splits >= 2:
+            cv = StratifiedKFold(n_splits=n_splits, shuffle=True, random_state=42)
+            probs = cross_val_predict(clf, X_lab, y, cv=cv, method="predict_proba")[:, 1]
+        else:
+            clf.fit(X_lab, y)
+            probs = clf.predict_proba(X_lab)[:, 1]
+
+        pred_probs[col] = probs
+        # Hitung besarnya kesalahan (0 = tebakan model sama persis, mendekati 1 = sangat meleset)
+        error_matrix[:, i] = np.abs(y.values - probs)
+
+    df_lab["mean_error"] = error_matrix.mean(axis=1)
+    df_lab["max_error"] = error_matrix.max(axis=1)
+
+    # Urutkan dari yang errornya paling parah
+    worst_rows = df_lab.sort_values(by=["mean_error", "max_error"], ascending=False).head(top_k)
+
+    print(f"\n=====================================================================")
+    print(f" TOP {top_k} STORY BERLABEL DENGAN AKURASI/PREDIKSI PALING MELESET")
+    print(f"=====================================================================")
+
+    for rank, (idx, row) in enumerate(worst_rows.iterrows(), 1):
+        curr_labels = [int(row[c]) for c in TARGET_COLS]
+        model_preds = [int(pred_probs.loc[idx, c] >= 0.5) for c in TARGET_COLS]
+        model_probs = [f"{pred_probs.loc[idx, c]:.2f}" for c in TARGET_COLS]
+
+        # Cari kriteria mana yang berbeda antara label Anda vs tebakan model
+        diff_cols = [
+            f"{c}(Anda:{curr_labels[j]} vs Model:{model_preds[j]} [{model_probs[j]}])"
+            for j, c in enumerate(TARGET_COLS)
+            if curr_labels[j] != model_preds[j]
+        ]
+
+        print(f"\n[{rank}/{top_k}] File: {row['_file_name']} ({row['_lang'].upper()}) | ID: {row['source_id']}")
+        print(f"Rata-rata Error : {row['mean_error']:.3f} | Konflik: {', '.join(diff_cols) if diff_cols else 'Probabilitas meragukan'}")
+        print(f"Story           : \"{row['text']}\"")
+        print(f"Label Saat Ini  [I N V E S T] : {' '.join(map(str, curr_labels))}")
+        print(f"Tebakan Model   [I N V E S T] : {' '.join(map(str, model_preds))}  (Prob: {' '.join(model_probs)})")
+
+        ans = input("Ketik 6 angka baru (misal '0 1 0 1 1 1'), 'm' untuk pakai tebakan model, atau Enter untuk biarkan: ").strip()
+        if not ans:
+            continue
+        elif ans.lower() == "m":
+            update_csv_row(row, model_preds)
+        else:
+            parts = ans.split()
+            if len(parts) == 6 and all(p in ("0", "1") for p in parts):
+                update_csv_row(row, [int(p) for p in parts])
+            else:
+                print("  [!] Format input tidak valid, dilewati.")
+
+
+# =====================================================================
+# 5. MODE 2: LABELI 5 DATA KOSONG PALING MERAGUKAN (UNCERTAINTY SAMPLING)
+# =====================================================================
+def mode_label_uncertain_5(full_df, full_X, top_k=5):
+    """
+    Mencari 5 baris yang BELUM DILABELI (NaN) di mana model paling bingung
+    (probabilitas paling dekat ke 0.50).
+    """
+    is_labeled = full_df[TARGET_COLS].notna().all(axis=1)
+    df_lab = full_df[is_labeled]
+    df_unlab = full_df[~is_labeled].copy()
+
+    if len(df_unlab) == 0:
+        print("\n[Info] Seluruh baris di ke-24 file sudah memiliki label lengkap!")
+        return
+
+    X_train = full_X.loc[is_labeled]
+    X_pool = full_X.loc[~is_labeled]
+
+    uncertainty_mat = np.zeros((len(df_unlab), len(TARGET_COLS)))
+    preds_df = pd.DataFrame(index=df_unlab.index, columns=TARGET_COLS, dtype=int)
+
+    for i, col in enumerate(TARGET_COLS):
+        y_train = df_lab[col].astype(int)
+        if y_train.nunique() < 2:
+            preds_df[col] = int(y_train.iloc[0]) if len(y_train) > 0 else 1
+            uncertainty_mat[:, i] = 0.5
+            continue
+
+        clf = build_classifier(use_ebm=False)
+        clf.fit(X_train, y_train)
+        probs = clf.predict_proba(X_pool)[:, 1]
+        preds_df[col] = (probs >= 0.5).astype(int)
+        uncertainty_mat[:, i] = 1.0 - (2.0 * np.abs(probs - 0.5))
+
+    df_unlab["uncertainty"] = uncertainty_mat.mean(axis=1)
+    top_uncertain = df_unlab.sort_values(by="uncertainty", ascending=False).head(top_k)
+
+    print(f"\n=====================================================================")
+    print(f" TOP {top_k} STORY BELUM BERLABEL PALING MEMBINGUNGKAN MODEL")
+    print(f"=====================================================================")
+
+    for rank, (idx, row) in enumerate(top_uncertain.iterrows(), 1):
+        suggested = [int(preds_df.loc[idx, c]) for c in TARGET_COLS]
+        print(f"\n[{rank}/{top_k}] File: {row['_file_name']} ({row['_lang'].upper()}) | ID: {row['source_id']} | Kebingungan: {row['uncertainty']:.2f}")
+        print(f"Kategori       : {row.get('category', '-')}")
+        print(f"Story          : \"{row['text']}\"")
+        print(f"Pre-label Model [I N V E S T] : {' '.join(map(str, suggested))}")
+
+        ans = input("Ketik 6 angka (misal '0 1 1 1 1 1'), Enter untuk setuju Pre-label, atau 's' untuk lewati: ").strip()
+        if ans.lower() == "s":
+            continue
+        elif not ans:
+            update_csv_row(row, suggested)
+        else:
+            parts = ans.split()
+            if len(parts) == 6 and all(p in ("0", "1") for p in parts):
+                update_csv_row(row, [int(p) for p in parts])
+            else:
+                print("  [!] Format input harus 6 angka 0/1, dilewati.")
+
+
+# =====================================================================
+# 6. MODE 3: TRAIN FINAL, EVALUASI PER BAHASA (ID vs EN) & SIMPAN MODEL
+# =====================================================================
+def mode_train_and_evaluate(full_df, full_X, use_ebm=False):
+    is_labeled = full_df[TARGET_COLS].notna().all(axis=1)
+    df_lab = full_df[is_labeled].copy()
+    X_lab = full_X.loc[is_labeled].copy()
+
+    os.makedirs(MODEL_OUT_DIR, exist_ok=True)
+    trained_models = {}
+
+    print("\n=====================================================================")
+    print(" HASIL EVALUASI MODEL WHITE-BOX (CROSS-VALIDATION) & PENYIMPANAN")
+    print("=====================================================================")
+    print(f"Total Sampel Berlabel: {len(df_lab)} (ID: {(df_lab['_lang']=='id').sum()} | EN: {(df_lab['_lang']=='en').sum()})\n")
+    print(f"{'Kriteria':<10} | {'Acc (All)':<10} | {'F1 (All)':<10} | {'F1 (ID)':<10} | {'F1 (EN)':<10} | {'Fitur Paling Berpengaruh'}")
+    print("-" * 95)
+
+    for col in TARGET_COLS:
+        y = df_lab[col].astype(int)
+        if y.nunique() < 2 or y.value_counts().min() < 2:
+            print(f"{col:<10} | [Belum cukup sampel kelas 0 dan 1 — minimal masing-masing 2 baris]")
+            continue
+
+        n_splits = min(5, int(y.value_counts().min()))
+        cv = StratifiedKFold(n_splits=n_splits, shuffle=True, random_state=42)
+        clf = build_classifier(use_ebm=use_ebm)
+
+        # Prediksi Out-of-Fold untuk evaluasi jujur
+        y_pred = cross_val_predict(clf, X_lab, y, cv=cv, method="predict")
+
+        acc_all = accuracy_score(y, y_pred)
+        f1_all = f1_score(y, y_pred, zero_division=0)
+
+        mask_id = (df_lab["_lang"] == "id").values
+        mask_en = (df_lab["_lang"] == "en").values
+        f1_id = f1_score(y[mask_id], y_pred[mask_id], zero_division=0) if mask_id.sum() > 0 else 0.0
+        f1_en = f1_score(y[mask_en], y_pred[mask_en], zero_division=0) if mask_en.sum() > 0 else 0.0
+
+        # Fit pada seluruh data berlabel untuk disimpan
+        clf.fit(X_lab, y)
+        trained_models[col] = clf
+
+        # Ambil fitur terpenting untuk bukti interpretabilitas ke dosen
+        top_feat_str = "-"
+        if hasattr(clf, "coef_"):
+            coefs = clf.coef_[0]
+            top_idx = np.argsort(np.abs(coefs))[::-1][:2]
+            top_feat_str = ", ".join([f"{FEATURE_NAMES[k]} ({coefs[k]:+.2f})" for k in top_idx])
+
+        print(f"{col:<10} | {acc_all:<10.3f} | {f1_all:<10.3f} | {f1_id:<10.3f} | {f1_en:<10.3f} | {top_feat_str}")
+
+    bundle_path = os.path.join(MODEL_OUT_DIR, "reqlint_invest_models.pkl")
+    joblib.dump({"models": trained_models, "features": FEATURE_NAMES}, bundle_path)
+    print(f"\n[Sukses] Model berhasil disimpan di: {bundle_path}")
+
+
+# =====================================================================
+# 7. MENU UTAMA CLI
+# =====================================================================
+def main():
+    while True:
+        full_df, full_X = load_all_data()
+        is_labeled = full_df[TARGET_COLS].notna().all(axis=1)
+
+        total_rows = len(full_df)
+        labeled_rows = is_labeled.sum()
+        unlabeled_rows = (~is_labeled).sum()
+
+        id_total = (full_df["_lang"] == "id").sum()
+        id_lab = (is_labeled & (full_df["_lang"] == "id")).sum()
+        en_total = (full_df["_lang"] == "en").sum()
+        en_lab = (is_labeled & (full_df["_lang"] == "en")).sum()
+
+        print("\n=====================================================================")
+        print(" REQLINT — ACTIVE LEARNING & INTERPRETABLE MODEL TRAINER (ID + EN)")
+        print("=====================================================================")
+        print(f" Status Data : Total {total_rows} Story | Sudah Dilabeli: {labeled_rows} | Belum: {unlabeled_rows}")
+        print(f" - Indonesia : {id_lab}/{id_total} berlabel (dataset-indo-label-final)")
+        print(f" - English   : {en_lab}/{en_total} berlabel (dataset-eng-label-final)")
+        print("---------------------------------------------------------------------")
+        print(" [1] Relabel 5 Story Berlabel yang Akurasi Modelnya Paling Jelek (Error Audit)")
+        print(" [2] Labeli 5 Story Kosong (NaN) yang Paling Membingungkan Model (Uncertainty)")
+        print(" [3] Train Model Final, Tampilkan Metrik (ID vs EN) & Export .pkl")
+        print(" [0] Keluar")
+
+        choice = input("\nPilih menu (0/1/2/3): ").strip()
+        if choice == "1":
+            mode_relabel_worst_5(full_df, full_X, top_k=5)
+        elif choice == "2":
+            mode_label_uncertain_5(full_df, full_X, top_k=5)
+        elif choice == "3":
+            mode_train_and_evaluate(full_df, full_X, use_ebm=False)
+        elif choice == "0":
+            print("Selesai. Semangat pengerjaan ReqLint-nya!")
+            break
+        else:
+            print("[!] Pilihan tidak dikenal.")
+
+
+if __name__ == "__main__":
+    main()
