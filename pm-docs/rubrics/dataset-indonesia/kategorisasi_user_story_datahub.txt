@@ -1,0 +1,88 @@
+# 1. Autentikasi, Pendaftaran & Onboarding Pengguna
+Sebagai Publisher, saya ingin mendaftar akun, sehingga saya dapat mempublikasikan paket data saya ke registri dan memiliki akun publisher untuk mempublikasikan paket data saya di bawahnya.
+Sebagai Visitor, saya ingin mendaftar melalui github atau google, sehingga saya tidak perlu memasukkan banyak informasi dan mengingat kata sandi saya untuk situs web lain lagi.
+Sebagai Publisher, saya ingin mengetahui apa yang harus dilakukan selanjutnya setelah mendaftar, sehingga saya dapat segera memulai dengan cepat.
+Sebagai Admin, saya ingin mengundang seseorang untuk bergabung dengan platform, sehingga mereka dapat mulai berkontribusi atau menggunakan data.
+Sebagai Publisher, saya ingin mengonfigurasi klien saya, sehingga saya dapat mulai mempublikasikan paket data.
+
+# 2. Manajemen Organisasi, Tim & Profil Publisher
+Sebagai Consumer, saya ingin menelusuri dan menemukan penerbit, sehingga saya dapat menemukan penerbit yang menarik dan paket-paket mereka.
+Sebagai Consumer, saya ingin melihat profil penerbit, sehingga saya dapat menemukan paket-paket mereka dan mendapatkan gambaran tentang seberapa aktif dan baiknya mereka.
+Sebagai Consumer, saya ingin melihat profil penerbit, sehingga saya dapat melihat siapa di balik paket tertentu atau untuk melihat paket lain apa yang mereka hasilkan.
+Sebagai Consumer, saya ingin mencari di antara semua paket data yang dimiliki oleh penerbit, sehingga saya dapat dengan mudah menemukan satu paket data di antara semua paket data oleh penerbit ini.
+Sebagai Owner, saya ingin mengedit profil saya, sehingga profil tersebut diperbarui dengan informasi baru.
+Sebagai Owner, saya ingin mengundang pengguna yang sudah ada, sehingga pengguna tersebut dapat menjadi anggota penerbit saya.
+Sebagai owner, saya ingin mengundang seseorang menggunakan email mereka untuk mendaftar dan menjadi anggota Penerbit saya, sehingga mereka berwenang untuk mempublikasikan paket data di bawah Penerbit saya.
+Sebagai owner, saya ingin menghapus seseorang dari keanggotaan di penerbit saya, sehingga mereka tidak lagi memiliki kemampuan untuk mempublikasikan atau memodifikasi paket data saya.
+Sebagai owner, saya ingin melihat semua orang di organisasi saya dan peran apa yang mereka miliki, sehingga saya dapat mengubahnya jika saya mau.
+Sebagai owner, saya ingin menjadikan pengguna sebagai pemilik, sehingga mereka memiliki kendali penuh.
+Sebagai owner, saya ingin mencopot pengguna sebagai pemilik, sehingga mereka hanya menjadi anggota dan tidak lagi memiliki kendali penuh.
+
+# 3. Publikasi & Manajemen Siklus Hidup Paket Data (Publishing & Lifecycle)
+Sebagai Publisher, saya ingin mengimpor paket data saya ke dalam registri, sehingga data saya memiliki tempat daring permanen untuk diakses.
+Sebagai Publisher, saya ingin mempublikasikan paket data di UI, sehingga paket tersebut tersedia dan terpublikasi.
+Sebagai Publisher, saya ingin membuat paket data di UI sehingga paket tersebut tersedia dan terpublikasi.
+Sebagai Publisher, saya ingin menggunakan perintah publish untuk memperbarui paket data yang sudah ada di registri, sehingga paket tersebut muncul di sana.
+Sebagai Publisher, saya ingin membatalkan publikasi paket data, sehingga paket tersebut tidak lagi terlihat oleh siapa pun.
+Sebagai Publisher, saya ingin menghapus paket data secara permanen, sehingga paket tersebut tidak lagi memakan ruang penyimpanan.
+Sebagai Publisher, saya ingin dapat memulihkan paket data yang dihapus melalui cli, sehingga paket tersebut kembali terlihat dan tersedia untuk dilihat, diunduh.
+Sebagai Publisher, saya ingin membatalkan penghapusan paket data yang dihapus, sehingga paket data yang dihapus tersebut sekarang terlihat lagi.
+
+# 4. Privasi & Kontrol Akses Dataset (Visibilitas)
+Sebagai Publisher, saya ingin mempublikasikan dataset, sehingga saya dapat melihat hanya dataset tersebut dengan beberapa orang.
+Sebagai Publisher, saya ingin mempublikasikan dataset, sehingga saya dapat membagikan dataset tersebut secara publik kepada semua orang.
+Sebagai Publisher, saya ingin memiliki paket data pribadi, sehingga saya dapat membagikannya hanya dengan tim saya.
+
+# 5. Validasi & Penjaminan Kualitas Data
+Sebagai Publisher, saya ingin memvalidasi data yang akan saya publikasikan ke registri, sehingga saya mempublikasikan data yang baik dan mengetahui apa yang saya lakukan.
+Sebagai Publisher, saya ingin data divalidasi ketika saya mempublikasikannya, sehingga saya segera tahu jika saya secara tidak sengaja merusak data saya atau memiliki bug dan dapat mengambil tindakan untuk memperbaikinya.
+Sebagai Consumer, saya ingin mengetahui bahwa data yang saya unduh itu baik dan dapat diandalkan, sehingga saya tidak perlu memeriksanya sendiri atau menemui bug yang mengesalkan di kemudian hari.
+
+# 6. Caching, Ketahanan & Redundansi Penyimpanan Data
+Sebagai Publisher, saya ingin mempublikasikan paket data di mana data sumber dayanya disimpan di server saya tetapi registri menyimpan salinan cache dari data tersebut, sehingga jika data saya hilang atau rusak saya masih memiliki salinan yang dapat digunakan orang.
+Sebagai Consumer, saya ingin dapat memperoleh data untuk suatu paket data bahkan jika data aslinya telah dipindahkan atau dihapus, sehingga saya masih dapat menggunakannya dan aplikasi atau analisis saya tetap berfungsi.
+
+# 7. Penemuan, Pencarian & Pratinjau Dataset (Discovery & Preview)
+Sebagai Publisher, saya ingin dapat melihat pratinjau tampilan dari paket data saat ini menggunakan cli sebelum mempublikasikan, sehingga saya dapat menyempurnakan deklarasi json dari bagian tampilan datapackage untuk mencapai hasil yang terlihat bagus.
+Sebagai Publisher, saya ingin melihat pratinjau datapackage yang telah saya siapkan, sehingga saya dapat memeriksa apakah itu berfungsi dan membagikan hasilnya.
+Sebagai publisher, saya ingin menunjukkan kepada dunia bagaimana data saya yang dipublikasikan, sehingga langsung menarik perhatian konsumen.
+Sebagai Consumer, saya ingin melihat paket data secara daring, sehingga saya bisa mendapatkan gambaran apakah ini dataset yang saya inginkan.
+Sebagai consumer, saya ingin melihat paket data, sehingga saya bisa mendapatkan gambaran apakah saya menginginkan dataset ini atau tidak.
+Sebagai Publisher, saya ingin melihat contoh nyata dari paket yang dipublikasikan sehingga saya dapat memahami betapa berguna dan sederhananya format datapackage dan registri tersebut.
+Sebagai Consumer, saya ingin melihat beberapa contoh paket data dengan cepat, sehingga saya mendapatkan gambaran tentang apa yang ada di situs ini dan apakah berguna untuk melihat lebih jauh.
+Sebagai Consumer, saya ingin mencari paket data, sehingga saya dapat menemukan yang saya inginkan.
+Sebagai Consumer, saya ingin mencari berdasarkan deskripsi paket data, sehingga saya dapat menemukan paket yang terkait dengan beberapa kata kunci.
+Sebagai Consumer, saya ingin melihat seberapa banyak data telah diunduh, sehingga saya dapat memilih yang paling populer jika ada beberapa alternatif untuk kasus penggunaan saya.
+Sebagai Consumer, saya ingin melihat seberapa aktif situs ini, sehingga saya dapat memutuskan apakah saya harus terlibat.
+
+# 8. Versioning, Tagging & Riwayat Perubahan Dataset
+Sebagai Publisher, saya ingin menandai datapackage untuk membuat snapshot data di server registri, sehingga konsumen dapat merujuk ke sana.
+Sebagai Publisher, saya ingin diperingatkan bahwa sebuah tag sudah ada ketika saya mencoba menimpanya, sehingga saya tidak secara tidak sengaja menimpa data bertag stabil yang diandalkan oleh konsumen.
+Sebagai Publisher, saya ingin dapat menimpa datapackage yang telah ditandai sebelumnya, sehingga saya dapat memperbaikinya jika saya melakukan kesalahan.
+Sebagai Publisher, saya ingin membuat versi Data Package saya dan menyimpan beberapa versi termasuk versi yang lebih lama, sehingga saya tidak merusak sistem konsumen ketika saya mengubah datapackage saya.
+Sebagai Publisher, saya ingin dapat mengakses versi sebelumnya yang saya tandai, sehingga saya dapat kembali ke sana dan meninjaunya.
+Sebagai Consumer, saya ingin mengetahui detail lengkap tentang bagaimana skema paket data telah berubah, sehingga saya dapat menyesuaikan skrip saya untuk menanganinya.
+Sebagai Consumer, saya ingin mendapatkan gambaran tentang usia datapackage yang telah saya unduh sebelumnya, sehingga saya dapat memutuskan apakah saya harus memperbaruinya atau tidak.
+Sebagai Consumer, saya ingin melihat Datapackage pada versi tertentu secara daring, sehingga saya dapat mempresentasikan/mendiskusikan bagian waktu data tertentu yang diminati dengan orang lain.
+Sebagai Consumer, saya ingin mengunduh Data package pada versi tertentu, sehingga saya tahu itu kompatibel dengan skrip dan sistem saya.
+Sebagai Consumer, saya ingin diberi tahu tentang perubahan pada paket yang saya pedulikan, sehingga saya dapat memeriksa apa yang telah berubah dan mengambil tindakan.
+
+# 9. Konsumsi Data, Integrasi Perkakas & Dependensi Pengembang
+Sebagai Consumer, saya ingin mengunduh paket data dalam satu berkas, sehingga saya tidak perlu mengunduh deskriptor dan setiap sumber daya secara manual.
+Sebagai Developer, saya ingin menggunakan paket data sebagai pustaka node dalam proyek saya, sehingga saya dapat bergantung padanya menggunakan kerangka kerja dependensi normal saya.
+Sebagai Consumer, saya ingin memuat Data Package dari R, sehingga saya dapat langsung mulai bereksperimen dengannya.
+Sebagai Data Analyst saya ingin mengunduh paket data, sehingga saya dapat mempelajarinya dan mengolahnya untuk menyimpulkan data baru atau menghasilkan wawasan baru.
+Sebagai Data Analyst, saya ingin memperbarui paket data yang diunduh sebelumnya, sehingga saya dapat bekerja dengan data terbaru.
+Sebagai Consumer, saya ingin mengunduh data DataPackage ke dalam satu basis data SQLite yang koheren, sehingga saya dapat memperolehnya dengan mudah dalam satu bentuk.
+Sebagai Data Analyst, saya ingin membandingkan berbagai versi dari suatu datapackage secara lokal, sehingga saya dapat melihat perubahan skema dengan jelas dan menyesuaikan kode analitik saya ke versi skema yang diinginkan.
+Sebagai Web Developer, saya ingin dapat menginstal beberapa versi dari datapackage yang sama secara terpisah, sehingga semua proyek saya dapat dikembangkan secara independen dan diterapkan secara lokal.
+Sebagai Developer, saya ingin mencantumkan semua persyaratan DataPackage untuk proyek saya dalam berkas dan menyematkan versi pasti dari DataPackage apa pun yang menjadi dependensi proyek saya, sehingga proyek tersebut dapat diterapkan secara deterministik secara lokal dan tidak rusak karena perubahan skema DataPackage.
+
+# 10. Paket Harga, Langganan & Penagihan (Billing)
+Sebagai Admin, saya ingin memiliki paket harga dan sistem penagihan, sehingga saya dapat mengenakan biaya kepada pengguna dan membuat platform saya berkelanjutan.
+Sebagai Publisher, saya ingin mengetahui apakah situs ini memiliki paket harga dan berapa harganya, sehingga saya dapat memperkirakan berapa biayanya bagi saya di masa depan dan merasa yakin bahwa pihak penyedia ini berkelanjutan.
+Sebagai Publisher, saya ingin mendaftar untuk paket harga tertentu, sehingga saya berhak atas apa yang diizinkannya.
+
+# 11. Administrasi Sistem & Metrik Platform
+Sebagai Admin, saya ingin mengatur parameter konfigurasi utama untuk penerapan situs saya, sehingga saya dapat mengubah informasi penting seperti judul situs.
+Sebagai Admin, saya ingin melihat metrik utama tentang penggunaan seperti pengguna, penggunaan API, unduhan, sehingga saya tahu bagaimana perkembangannya.
