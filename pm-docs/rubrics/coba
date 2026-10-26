@@ -430,7 +430,7 @@ def main():
             mode_train_and_evaluate(full_df, full_X, use_ebm=False)
         elif choice == "0":
             print("Selesai. Semangat pengerjaan ReqLint-nya!")
-            break
+            break3
         else:
             print("[!] Pilihan tidak dikenal.")
 
