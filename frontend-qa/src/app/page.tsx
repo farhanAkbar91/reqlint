@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
+import { ArrowUpRight } from 'lucide-react';
 import { RequirementEditor } from '../components/editor/RequirementEditor';
 import { AuditScorecard } from '../components/analysis/AuditScorecard';
 import { SmellList } from '../components/analysis/SmellList';
@@ -22,12 +24,21 @@ export default function HomePage() {
     try {
       const res = await auditRequirement(text);
       setAuditResult(res);
+      sessionStorage.setItem('reqlint:last-audit', JSON.stringify(res));
     } catch (err: any) {
       setError(err.message || 'Failed to analyze requirement');
     } finally {
       setIsLoading(false);
     }
   };
+
+  React.useEffect(() => {
+    const pendingRequirement = sessionStorage.getItem('reqlint:pending-requirement');
+    if (pendingRequirement) {
+      setText(pendingRequirement);
+      sessionStorage.removeItem('reqlint:pending-requirement');
+    }
+  }, []);
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -49,6 +60,11 @@ export default function HomePage() {
         <AuditScorecard auditResult={auditResult} />
         {auditResult && (
           <SmellList smells={auditResult.smells} revisions={auditResult.revisions} />
+        )}
+        {auditResult && (
+          <Link href="/audit/hasilAudit" className="inline-flex items-center gap-2 rounded-lg border border-slate-700 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:border-emerald-500 hover:text-emerald-300">
+            Lihat hasil audit lengkap <ArrowUpRight size={16} />
+          </Link>
         )}
       </div>
     </div>
