@@ -2,8 +2,146 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --ink: 29 29 31;
+  --muted: 108 108 114;
+  --faint: 140 140 148;
+  --card: 255 255 255;
+  --line: 0 0 0;
+  --field: 255 255 255;
+  --btn: 29 29 31;
+  --btn-ink: 255 255 255;
+  --accent: 0 113 227;
+  --shadow-card: 0 10px 40px -14px rgb(0 0 0 / 0.2);
+  --shadow-soft: 0 1px 2px rgb(0 0 0 / 0.05), 0 4px 12px -4px rgb(0 0 0 / 0.07);
+  color-scheme: light;
+}
+
+.dark {
+  --ink: 245 245 247;
+  --muted: 160 160 170;
+  --faint: 118 118 128;
+  --card: 28 28 32;
+  --line: 255 255 255;
+  --field: 36 36 41;
+  --btn: 245 245 247;
+  --btn-ink: 20 20 24;
+  --accent: 64 156 255;
+  --shadow-card: 0 10px 40px -14px rgb(0 0 0 / 0.6);
+  --shadow-soft: 0 1px 2px rgb(0 0 0 / 0.4);
+  color-scheme: dark;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
-  background-color: #0B132B;
-  color: #F8FAFC;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Inter Variable', Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: rgb(var(--ink));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'cv11', 'ss01';
+  background-color: #f7f5f1;
+  background-image: radial-gradient(1300px 760px at 0% 0%, #e1e8f6 0%, transparent 62%),
+    radial-gradient(1000px 760px at 0% 100%, #f5ebea 0%, transparent 62%),
+    radial-gradient(900px 640px at 100% 25%, #eeedf8 0%, transparent 62%);
+  background-attachment: fixed;
+}
+
+.dark body {
+  background-color: #141416;
+  background-image: radial-gradient(1100px 640px at 0% 0%, #172039 0%, transparent 62%),
+    radial-gradient(900px 640px at 100% 100%, #1d1622 0%, transparent 62%);
+}
+
+::selection {
+  background: rgb(var(--accent) / 0.22);
+}
+
+@layer components {
+  .card {
+    @apply rounded-[22px] border border-line/[0.08] bg-card shadow-card;
+  }
+  .btn-primary {
+    @apply inline-flex select-none items-center justify-center gap-2 rounded-full bg-btn font-semibold text-btnink transition hover:opacity-90 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-40;
+  }
+  .btn-ghost {
+    @apply inline-flex select-none items-center justify-center gap-2 rounded-full border border-line/25 bg-card/60 font-medium text-ink transition hover:bg-card disabled:cursor-not-allowed disabled:opacity-40;
+  }
+  .field {
+    @apply h-[52px] w-full rounded-xl border border-line/[0.14] bg-field px-4 text-[16px] text-ink outline-none transition placeholder:text-faint focus:border-accent/50 focus:ring-4 focus:ring-accent/10;
+  }
+  .label {
+    @apply mb-2 block text-[13px] font-medium text-ink;
+  }
+  .eyebrow {
+    @apply text-[11.5px] font-medium uppercase tracking-[0.08em] text-muted;
+  }
+  .pill {
+    @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11.5px] font-medium;
+  }
+  .menu {
+    @apply absolute z-50 mt-2 min-w-[200px] rounded-2xl border border-line/[0.08] bg-card p-1.5 shadow-card;
+    animation: pop-in 0.14s ease-out both;
+  }
+  .menu-item {
+    @apply flex w-full items-center gap-2.5 rounded-xl px-3 py-2 text-left text-[13.5px] text-ink transition hover:bg-line/[0.05];
+  }
+}
+
+/* Garis bergelombang di bawah istilah bermasalah pada editor */
+.squiggle {
+  background: transparent;
+  color: transparent;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: #f5a524;
+  text-decoration-thickness: 1.5px;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 4px;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 8px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.animate-toast {
+  animation: toast-in 0.2s ease-out both;
+}
+
+/* Lapisan editor: textarea dan backdrop harus memakai tipografi identik. */
+.editor-layer {
+  grid-area: 1 / 1;
+  margin: 0;
+  padding: 20px 20px 36px 68px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+  font-size: 14.5px;
+  line-height: 26px;
+  letter-spacing: 0;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  word-break: normal;
+  tab-size: 2;
+  width: 100%;
+  min-width: 0;
+  border-radius: 0;
 }

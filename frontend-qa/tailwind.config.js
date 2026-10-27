@@ -1,20 +1,30 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['"Inter Variable"', 'Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
+        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Consolas', '"DejaVu Sans Mono"', 'monospace'],
+      },
       colors: {
-        brand: {
-          dark: '#0B132B',
-          navy: '#1C2541',
-          accent: '#00F5D4',
-          highlight: '#7B2CBF',
-        }
-      }
+        ink: 'rgb(var(--ink) / <alpha-value>)',
+        muted: 'rgb(var(--muted) / <alpha-value>)',
+        faint: 'rgb(var(--faint) / <alpha-value>)',
+        card: 'rgb(var(--card) / <alpha-value>)',
+        line: 'rgb(var(--line) / <alpha-value>)',
+        field: 'rgb(var(--field) / <alpha-value>)',
+        btn: 'rgb(var(--btn) / <alpha-value>)',
+        btnink: 'rgb(var(--btn-ink) / <alpha-value>)',
+        accent: 'rgb(var(--accent) / <alpha-value>)',
+      },
+      boxShadow: {
+        card: 'var(--shadow-card)',
+        soft: 'var(--shadow-soft)',
+      },
     },
   },
   plugins: [],

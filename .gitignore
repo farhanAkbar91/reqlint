@@ -10,6 +10,7 @@ venv/
 # Node & Frontend
 node_modules/
 .next/
+.next-preview/
 out/
 build/
 .cypress_cache/

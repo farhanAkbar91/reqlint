@@ -43,3 +43,33 @@ async def get_current_user(
         raise unauthorized_exc
 
     return user
+
+async def get_optional_current_user(
+    authorization: Optional[str] = Header(None),
+    db: AsyncSession = Depends(get_db)
+) -> Optional[User]:
+    """
+    Returns the authenticated User if a valid Bearer token is provided;
+    returns None if no token or an invalid token is provided (guest access).
+    """
+    if not authorization or not authorization.startswith("Bearer "):
+        return None
+
+    token = authorization.split(" ")[1].strip()
+    payload = decode_access_token(token)
+    if not payload:
+        return None
+
+    sub = payload.get("sub")
+    if not sub:
+        return None
+
+    try:
+        user_id = int(sub)
+    except (ValueError, TypeError):
+        return None
+
+    stmt = select(User).where(User.id_user == user_id)
+    result = await db.execute(stmt)
+    return result.scalar_one_or_none()
+
